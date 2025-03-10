@@ -1,0 +1,10 @@
+name: Dummy Check
+
+on: [push, pull_request]
+
+jobs:
+  dummy_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Dummy Check
+        run: echo "Dummy check passed!"
