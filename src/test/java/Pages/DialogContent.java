@@ -18,16 +18,23 @@ public class DialogContent extends ParentPage{
     public List<WebElement> tShirtsProducts;
 
 
+    @FindBy(xpath = "//a[@class='navigation-links' and text()='AGB']")
+    public WebElement agbBtn;
+
+
+
+
 
 
     public WebElement getWebElement(String strElementName){
 
         switch (strElementName.trim())
         {
-            case "":
+            case "agbBtn": return this.agbBtn;
         }
         return null;
     }
+
 
 
     //US_07_Store Feature/T-Shirts method
