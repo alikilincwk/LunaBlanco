@@ -2,7 +2,10 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class DialogContent extends ParentPage{
     public DialogContent() {
@@ -10,6 +13,9 @@ public class DialogContent extends ParentPage{
     }
 
 
+    //US_07_Store Feature/T-Shirts
+    @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
+    public List<WebElement> tShirtsProducts;
 
 
 
@@ -21,5 +27,11 @@ public class DialogContent extends ParentPage{
             case "":
         }
         return null;
+    }
+
+
+    //US_07_Store Feature/T-Shirts method
+    public List<WebElement> getTsirtsProducts() {
+        return this.tShirtsProducts;
     }
 }
