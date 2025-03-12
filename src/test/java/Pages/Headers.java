@@ -45,6 +45,11 @@ public class Headers extends ParentPage{
     public WebElement abmeldenBtn;
 
 
+    //  US_17_Profile Feature/ADRESSE
+    @FindBy(xpath="//span[@class='menu-hover-line' and text()='Philosophy']")
+    public WebElement philosophyBtn;
+
+
 
 
 
@@ -56,6 +61,8 @@ public class Headers extends ParentPage{
             case "bestellungenBtn": return this.bestellungenBtn;
             case "adresseBtn": return this.adresseBtn;
             case "abmeldenBtn": return this.abmeldenBtn;
+            case "philosophyBtn": return this.philosophyBtn;
+
         }
         return null;
     }
