@@ -30,6 +30,19 @@ public class Headers extends ParentPage{
     public WebElement archiv;
 
 
+    //US_14_Profile Feature/BESTELLUNGEN
+    @FindBy(xpath="//i[@class='far fa-user icons']")
+    public WebElement userProfile;
+    @FindBy(xpath="//a[@href='/mein-konto/bestellungen/']")
+    public WebElement bestellungenBtn;
+
+    //US_15_Profile Feature/ADRESSE
+    @FindBy(xpath="//a[@href='/mein-konto/adressen-bearbeiten/']")
+    public WebElement adresseBtn;
+
+    //US_16_Profile Feature/ADRESSE
+    @FindBy(xpath="//a[text()='ABMELDEN']")
+    public WebElement abmeldenBtn;
 
 
 
@@ -39,7 +52,10 @@ public class Headers extends ParentPage{
 
         switch (strElementName.trim())
         {
-            case "":
+            case "userProfile": return this.userProfile;
+            case "bestellungenBtn": return this.bestellungenBtn;
+            case "adresseBtn": return this.adresseBtn;
+            case "abmeldenBtn": return this.abmeldenBtn;
         }
         return null;
     }
