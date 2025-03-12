@@ -77,17 +77,17 @@ Below are the user stories tested in this project:
 
 ## Contributing
 
-alikilincwk - alikilinc.wk@gmail.com
-AlizaminMammadli - elizaminmemmedli@gmail.com
-betulgozlukoglu - gozlukoglubetul@gmail.com
-EbulfezMahmudzade - abulfazmahmudzada@outlook.com
-Gunay4 - gun1githb@gmail.com
-ilknurnese - ilknurnese@gmail.com
-KadriyeAl - kadriyealsancak@gmail.com
-Mednasa - girgin183@gmail.com
-Sinem777 - simseksinem@yahoo.com
-yaseyldrr - yase.yldrr@gmail.com
-YukselYucesan - yukselyucesan99@hotmail.com
+- **alikilincwk** - alikilinc.wk@gmail.com
+- **AlizaminMammadli** - elizaminmemmedli@gmail.com
+- **betulgozlukoglu** - gozlukoglubetul@gmail.com
+- **EbulfezMahmudzade** - abulfazmahmudzada@outlook.com
+- **Gunay4** - gun1githb@gmail.com
+- **ilknurnese** - ilknurnese@gmail.com
+- **KadriyeAl** - kadriyealsancak@gmail.com
+- **Mednasa** - girgin183@gmail.com
+- **Sinem777** - simseksinem@yahoo.com
+- **yaseyldrr** - yase.yldrr@gmail.com
+- **YukselYucesan** - yukselyucesan99@hotmail.com
 
 ## License
 This project is open-source and does not use any specific license.
