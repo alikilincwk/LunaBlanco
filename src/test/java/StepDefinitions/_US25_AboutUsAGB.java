@@ -25,10 +25,8 @@ public class _US25_AboutUsAGB {
 
     @Then("Verify that the AGB page opens")
     public void verifyThatTheAgbPageOpens() {
-
         String currentUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals("https://lunablanco.com/agb/", currentUrl);
-
 
     }
 }

@@ -18,6 +18,7 @@ public class DialogContent extends ParentPage{
     public List<WebElement> tShirtsProducts;
 
 
+    //US_25_About Us/AGB
     @FindBy(xpath = "//a[@class='navigation-links' and text()='AGB']")
     public WebElement agbBtn;
 

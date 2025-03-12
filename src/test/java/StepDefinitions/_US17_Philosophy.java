@@ -18,9 +18,7 @@ public class _US17_Philosophy {
 
     @When("Click on the Philosophy button")
     public void clickOnThePhilosophyButton() {
-
         pp.myClick(headers.philosophyBtn);
-
     }
 
 

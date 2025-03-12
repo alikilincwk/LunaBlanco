@@ -44,6 +44,7 @@ public class Headers extends ParentPage{
     @FindBy(xpath="//a[text()='ABMELDEN']")
     public WebElement abmeldenBtn;
 
+
     //  US_17_Profile Feature/ADRESSE
     @FindBy(xpath="//span[@class='menu-hover-line' and text()='Philosophy']")
     public WebElement philosophyBtn;
