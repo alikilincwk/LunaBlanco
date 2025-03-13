@@ -78,20 +78,20 @@ Below are the user stories tested in this project:
 
 ## Contributing
 
-- **alikilincwk** - alikilinc.wk@gmail.com
-- **AlizaminMammadli** - elizaminmemmedli@gmail.com
-- **betulgozlukoglu** - gozlukoglubetul@gmail.com
-- **EbulfezMahmudzade** - abulfazmahmudzada@outlook.com
-- **Gunay4** - gun1githb@gmail.com
-- **ilknurnese** - ilknurnese@gmail.com
-- **KadriyeAl** - kadriyealsancak@gmail.com
-- **Mednasa** - girgin183@gmail.com
-- **Sinem777** - simseksinem@yahoo.com
-- **yaseyldrr** - yase.yldrr@gmail.com
-- **YukselYucesan** - yukselyucesan99@hotmail.com
+- [**alikilincwk**](mailto:alikilinc.wk@gmail.com)
+- [**AlizaminMammadli**](mailto:elizaminmemmedli@gmail.com)
+- [**betulgozlukoglu**](mailto:gozlukoglubetul@gmail.com)
+- [**EbulfezMahmudzade**](mailto:abulfazmahmudzada@outlook.com)
+- [**Gunay4**](mailto:gun1githb@gmail.com)
+- [**ilknurnese**](mailto:ilknurnese@gmail.com)
+- [**KadriyeAl**](mailto:kadriyealsancak@gmail.com)
+- [**Mednasa**](mailto:girgin183@gmail.com)
+- [**Sinem777**](mailto:simseksinem@yahoo.com)
+- [**yaseyldrr**](mailto:yase.yldrr@gmail.com)
+- [**YukselYucesan**](mailto:yukselyucesan99@hotmail.com)
 
 ## License
 This project is open-source and does not use any specific license.
 
 ## Contact
-For any inquiries, feel free to reach out to any of the contributors.
+For any inquiries, feel free to reach out to any contributor by clicking their name.
