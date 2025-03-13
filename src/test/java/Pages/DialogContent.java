@@ -22,6 +22,14 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//a[@class='navigation-links' and text()='AGB']")
     public WebElement agbBtn;
 
+    //US_26_Cancellation Policy
+    @FindBy(xpath = "//a[contains(text(), 'Widerrufsbelehrung')]")
+    public WebElement WiderrufsbelehrungBtn;
+
+    //US_27_Privacy Policy
+    @FindBy(xpath = "//a[@class='navigation-links' and contains(@href, 'datenschutzerklaerung')]")
+    public WebElement DatenschutzerklärungBtn;
+
 
 
 
@@ -32,6 +40,8 @@ public class DialogContent extends ParentPage{
         switch (strElementName.trim())
         {
             case "agbBtn": return this.agbBtn;
+            case "WiderrufsbelehrungBtn":return this.WiderrufsbelehrungBtn;
+            case "DatenschutzerklärungBtn":return this.DatenschutzerklärungBtn;
         }
         return null;
     }
