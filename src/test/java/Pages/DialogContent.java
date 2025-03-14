@@ -17,7 +17,6 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
     public List<WebElement> tShirtsProducts;
 
-
     //US_25_About Us/AGB
     @FindBy(xpath = "//a[@class='navigation-links' and text()='AGB']")
     public WebElement agbBtn;
@@ -30,55 +29,55 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//a[@class='navigation-links' and contains(@href, 'datenschutzerklaerung')]")
     public WebElement DatenschutzerklärungBtn;
 
-    //US_09_StoreSweater
+    //US_09_StoreSweater, _US10_StoreHeadwear
     @FindBy(xpath = "//h1[contains(text(),title)]")
-    public WebElement sSweaterTitle;
+    public WebElement sSWTitle;
     @FindBy(xpath = "//span[@class='ti-plus']/..")
-    public WebElement sSweaterFilter;
+    public WebElement sSWFilter;
     @FindBy(xpath = "((//div[@class='product-thumb-wrap'])[1]//a)[1]")
-    public WebElement sSweaterFirstProduct;
+    public WebElement sSWFirstProduct;
     @FindBy(xpath = "//img[contains(@class, 'hongo-alternate-image')]")
-    public WebElement sSweaterAltImage;
+    public WebElement sSWAltImage;
     @FindBy(xpath = "//a[@class='attribute-round-link']")
-    public WebElement sSweaterFilterColour;
+    public WebElement sSWFilterColour;
     @FindBy(xpath = "(//a[@class='attribute-square-link'])[1]")
-    public WebElement sSweaterFilterSize;
+    public WebElement sSWFilterSize;
     @FindBy(xpath = "(//span[@tabindex='0' and contains(@class,'slider')])[1]")
-    public WebElement sSweaterFilterSliderLeft;
+    public WebElement sSWFilterSliderLeft;
     @FindBy(xpath = "(//span[@tabindex='0' and contains(@class,'slider')])[2]")
-    public WebElement sSweaterFilterSliderRight;
+    public WebElement sSWFilterSliderRight;
     @FindBy(xpath = "//div[@class='price_slider_amount']//button")
-    public WebElement sSweaterPriceFilterButton;
+    public WebElement sSWPriceFilterButton;
     @FindBy(xpath = "//span[@class='from']")
-    public WebElement sSweaterPriceFilterMin;
+    public WebElement sSWPriceFilterMin;
     @FindBy(xpath = "//span[@class='to']")
-    public WebElement sSweaterPriceFilterMax;
+    public WebElement sSWPriceFilterMax;
     @FindBy(xpath = "(//a//bdi)[1]")
-    public WebElement sSweaterComparePriceMin;
+    public WebElement sSWComparePriceMin;
     @FindBy(xpath = "(//a//bdi)[2]")
-    public WebElement sSweaterComparePriceMax;
+    public WebElement sSWComparePriceMax;
     @FindBy(xpath = "//a[@aria-label='Filter entfernen']")
-    public WebElement sSweaterFiltered;
+    public WebElement sSWFiltered;
     @FindBy(xpath = "//a[@aria-label='Zurücksetzen']")
-    public WebElement sSweaterFilterReset;
+    public WebElement sSWFilterReset;
     @FindBy(xpath = "//a[@data-col='2']")
-    public WebElement sSweaterFilterColumn2;
+    public WebElement sSWFilterColumn2;
     @FindBy(xpath = "//a[@data-col='3']")
-    public WebElement sSweaterFilterColumn3;
+    public WebElement sSWFilterColumn3;
     @FindBy(xpath = "//a[@data-col='4']")
-    public WebElement sSweaterFilterColumn4;
+    public WebElement sSWFilterColumn4;
     @FindBy(xpath = "//select[@name='orderby']")
-    public WebElement sSweaterFilterSelect;
+    public WebElement sSWSortSelect;
     @FindBy(xpath = "//option[@value='popularity']")
-    public WebElement sSweaterFilterPopularity;
+    public WebElement sSWSortPopularity;
     @FindBy(xpath = "//option[@value='date']")
-    public WebElement sSweaterFilterDate;
+    public WebElement sSWSortDate;
     @FindBy(xpath = "//option[@value='price']")
-    public WebElement sSweaterFilterPrice;
+    public WebElement sSWSortPrice;
     @FindBy(xpath = "//option[@value='price-desc']")
-    public WebElement sSweaterFilterPriceDesc;
+    public WebElement sSWSortPriceDesc;
     @FindBy(xpath = "//div[@class='blockUI blockOverlay']")
-    public WebElement sSweaterLoading;
+    public WebElement sSWLoading;
 
 
     public WebElement getWebElement(String strElementName){
@@ -88,24 +87,24 @@ public class DialogContent extends ParentPage{
             case "agbBtn": return this.agbBtn;
             case "WiderrufsbelehrungBtn":return this.WiderrufsbelehrungBtn;
             case "DatenschutzerklärungBtn":return this.DatenschutzerklärungBtn;
-            case "sSweaterFilter":return this.sSweaterFilter;
-            case "sSweaterFirstProduct":return this.sSweaterFirstProduct;
-            case "sSweaterAltImage":return this.sSweaterAltImage;
-            case "sSweaterFilterColour":return this.sSweaterFilterColour;
-            case "sSweaterFilterSize":return this.sSweaterFilterSize;
-            case "sSweaterFilterSliderLeft":return this.sSweaterFilterSliderLeft;
-            case "sSweaterFilterSliderRight":return this.sSweaterFilterSliderRight;
-            case "sSweaterPriceFilterButton":return this.sSweaterPriceFilterButton;
-            case "sSweaterFiltered":return this.sSweaterFiltered;
-            case "sSweaterFilterReset":return this.sSweaterFilterReset;
-            case "sSweaterFilterColumn2":return this.sSweaterFilterColumn2;
-            case "sSweaterFilterColumn3":return this.sSweaterFilterColumn3;
-            case "sSweaterFilterColumn4":return this.sSweaterFilterColumn4;
-            case "sSweaterFilterSelect":return this.sSweaterFilterSelect;
-            case "sSweaterFilterPopularity":return this.sSweaterFilterPopularity;
-            case "sSweaterFilterDate":return this.sSweaterFilterDate;
-            case "sSweaterFilterPrice":return this.sSweaterFilterPrice;
-            case "sSweaterFilterPriceDesc":return this.sSweaterFilterPriceDesc;
+            case "sSweaterFilter":return this.sSWFilter;
+            case "sSweaterFirstProduct":return this.sSWFirstProduct;
+            case "sSweaterAltImage":return this.sSWAltImage;
+            case "sSweaterFilterColour":return this.sSWFilterColour;
+            case "sSweaterFilterSize":return this.sSWFilterSize;
+            case "sSweaterFilterSliderLeft":return this.sSWFilterSliderLeft;
+            case "sSweaterFilterSliderRight":return this.sSWFilterSliderRight;
+            case "sSweaterPriceFilterButton":return this.sSWPriceFilterButton;
+            case "sSweaterFiltered":return this.sSWFiltered;
+            case "sSweaterFilterReset":return this.sSWFilterReset;
+            case "sSweaterFilterColumn2":return this.sSWFilterColumn2;
+            case "sSweaterFilterColumn3":return this.sSWFilterColumn3;
+            case "sSweaterFilterColumn4":return this.sSWFilterColumn4;
+            case "sSweaterFilterSelect":return this.sSWSortSelect;
+            case "sSweaterFilterPopularity":return this.sSWSortPopularity;
+            case "sSweaterFilterDate":return this.sSWSortDate;
+            case "sSweaterFilterPrice":return this.sSWSortPrice;
+            case "sSweaterFilterPriceDesc":return this.sSWSortPriceDesc;
 
         }
         return null;

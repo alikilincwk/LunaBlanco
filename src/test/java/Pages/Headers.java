@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.xml.xpath.XPath;
-
 public class Headers extends ParentPage{
     public Headers() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -29,7 +27,6 @@ public class Headers extends ParentPage{
     @FindBy(xpath="//*[text()='ARCHIV']")
     public WebElement archiv;
 
-
     //US_14_Profile Feature/BESTELLUNGEN
     @FindBy(xpath="//i[@class='far fa-user icons']")
     public WebElement userProfile;
@@ -44,15 +41,15 @@ public class Headers extends ParentPage{
     @FindBy(xpath="//a[text()='ABMELDEN']")
     public WebElement abmeldenBtn;
 
-
     //  US_17_Profile Feature/ADRESSE
     @FindBy(xpath="//span[@class='menu-hover-line' and text()='Philosophy']")
     public WebElement philosophyBtn;
 
-    //US_09_StoreSweater
+    //US_09_StoreSweater, _US10_StoreHeadwear
     @FindBy(xpath ="//a[@href='/category/sweaters/']")
-    public WebElement sHeaderSweaterIcon;
-
+    public WebElement sHeaderSWIcon;
+    @FindBy(xpath ="//a[@href='/category/headwear/']")
+    public WebElement sHeaderHWIcon;
 
 
 
@@ -65,7 +62,8 @@ public class Headers extends ParentPage{
             case "adresseBtn": return this.adresseBtn;
             case "abmeldenBtn": return this.abmeldenBtn;
             case "philosophyBtn": return this.philosophyBtn;
-            case "sHeaderSweaterIcon": return this.sHeaderSweaterIcon;
+            case "sHeaderSweaterIcon": return this.sHeaderSWIcon;
+            case "sHeaderHWIcon": return this.sHeaderHWIcon;
 
         }
         return null;

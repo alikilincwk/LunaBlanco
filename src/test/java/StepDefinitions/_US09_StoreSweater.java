@@ -14,89 +14,89 @@ public class _US09_StoreSweater {
     DialogContent dc = new DialogContent();
 
 
-    @Then("Confirm that user is in the correct page")
-    public void confirmThatUserIsInTheCorrectPage() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.sSweaterTitle));
-        Assert.assertEquals(dc.sSweaterTitle.getText().toLowerCase(), "Sweaters".toLowerCase());
+    @Then("Confirm that user is in the sweater page")
+    public void confirmThatUserIsInTheSweaterPage() {
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.sSWTitle));
+        Assert.assertEquals(dc.sSWTitle.getText().toLowerCase(), "Sweaters".toLowerCase());
     }
 
     @Then("Confirm that hovering over a product changes its picture")
     public void confirmThatHoveringOverAProductChangesItsPicture() {
-        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.sSweaterFirstProduct));
-        dc.scrolltoElement(dc.sSweaterFirstProduct);
-        Assert.assertTrue(Double.parseDouble(dc.sSweaterAltImage.getCssValue("opacity")) == 0);
-        dc.hoverOver(dc.sSweaterFirstProduct);
-        dc.wait.until( driver -> dc.sSweaterAltImage.getCssValue("opacity").equals("1"));
-        Assert.assertTrue(Double.parseDouble(dc.sSweaterAltImage.getCssValue("opacity")) == 1);
+        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.sSWFirstProduct));
+        dc.scrolltoElement(dc.sSWFirstProduct);
+        Assert.assertTrue(Double.parseDouble(dc.sSWAltImage.getCssValue("opacity")) == 0);
+        dc.hoverOver(dc.sSWFirstProduct);
+        dc.wait.until( driver -> dc.sSWAltImage.getCssValue("opacity").equals("1"));
+        Assert.assertTrue(Double.parseDouble(dc.sSWAltImage.getCssValue("opacity")) == 1);
     }
 
     @And("Filter products by its colours")
     public void filterProductsByItsColours() {
-        dc.myClick(dc.sSweaterFilterColour);
-        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.sSweaterFiltered));
-        Assert.assertEquals(dc.sSweaterFiltered.getText(),dc.sSweaterFilterColour.getText());
-        dc.myClick(dc.sSweaterFilterReset);
-        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSweaterFilterReset));
+        dc.myClick(dc.sSWFilterColour);
+        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.sSWFiltered));
+        Assert.assertEquals(dc.sSWFiltered.getText(),dc.sSWFilterColour.getText());
+        dc.myClick(dc.sSWFilterReset);
+        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSWFilterReset));
     }
 
     @And("Filter products by its size")
     public void filterProductsByItsSize() {
-        dc.myClick(dc.sSweaterFilterSize);
-        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.sSweaterFiltered));
-        Assert.assertEquals(dc.sSweaterFiltered.getText(),dc.sSweaterFilterSize.getText());
-        dc.myClick(dc.sSweaterFilterReset);
-        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSweaterFilterReset));
+        dc.myClick(dc.sSWFilterSize);
+        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.sSWFiltered));
+        Assert.assertEquals(dc.sSWFiltered.getText(),dc.sSWFilterSize.getText());
+        dc.myClick(dc.sSWFilterReset);
+        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSWFilterReset));
     }
 
     @And("Filter products by its price range")
     public void filterProductsByItsPriceRange() {
         Actions actions = new Actions(GWD.getDriver());
-        actions.clickAndHold(dc.sSweaterFilterSliderLeft)
+        actions.clickAndHold(dc.sSWFilterSliderLeft)
                 .moveByOffset(30, 0)
                 .release()
                 .perform();
-        actions.clickAndHold(dc.sSweaterFilterSliderRight)
+        actions.clickAndHold(dc.sSWFilterSliderRight)
                 .moveByOffset(-30, 0)
                 .release()
                 .perform();
-        String minPrice=dc.sSweaterPriceFilterMin.getText();
-        String maxPrice=dc.sSweaterPriceFilterMax.getText();
-        dc.myClick(dc.sSweaterPriceFilterButton);
-        dc.wait.until(ExpectedConditions.elementToBeClickable((dc.sSweaterFilterReset)));
+        String minPrice=dc.sSWPriceFilterMin.getText();
+        String maxPrice=dc.sSWPriceFilterMax.getText();
+        dc.myClick(dc.sSWPriceFilterButton);
+        dc.wait.until(ExpectedConditions.elementToBeClickable((dc.sSWFilterReset)));
         Assert.assertTrue(
                 Integer.parseInt(minPrice.replaceAll("[^0-9]",""))
-                        ==Integer.parseInt(dc.sSweaterComparePriceMin.getText().replaceAll(",00","").replaceAll("[^0-9]","")));
+                        ==Integer.parseInt(dc.sSWComparePriceMin.getText().replaceAll(",00","").replaceAll("[^0-9]","")));
         Assert.assertTrue(
                 Integer.parseInt(maxPrice.replaceAll("[^0-9]",""))
-                        ==Integer.parseInt(dc.sSweaterComparePriceMax.getText().replaceAll(",00","").replaceAll("[^0-9]","")));
-        dc.myClick(dc.sSweaterFilterReset);
-        dc.myClick(dc.sSweaterFilter);
+                        ==Integer.parseInt(dc.sSWComparePriceMax.getText().replaceAll(",00","").replaceAll("[^0-9]","")));
+        dc.myClick(dc.sSWFilterReset);
+        dc.myClick(dc.sSWFilter);
     }
 
-    @And("Make a Column Selection")
+    @And("Make a column selection")
     public void makeAColumnSelection() {
-        dc.myClick(dc.sSweaterFilterColumn2);
-        Assert.assertEquals(dc.sSweaterFilterColumn2.getAttribute("class"), "active");
-        dc.myClick(dc.sSweaterFilterColumn3);
-        Assert.assertEquals(dc.sSweaterFilterColumn3.getAttribute("class"), "active");
-        dc.myClick(dc.sSweaterFilterColumn4);
-        Assert.assertEquals(dc.sSweaterFilterColumn4.getAttribute("class"), "active");
+        dc.myClick(dc.sSWFilterColumn2);
+        Assert.assertEquals(dc.sSWFilterColumn2.getAttribute("class"), "active");
+        dc.myClick(dc.sSWFilterColumn3);
+        Assert.assertEquals(dc.sSWFilterColumn3.getAttribute("class"), "active");
+        dc.myClick(dc.sSWFilterColumn4);
+        Assert.assertEquals(dc.sSWFilterColumn4.getAttribute("class"), "active");
     }
 
     @And("Sort by categories")
     public void sortByCategories() {
-        dc.selectByValue(dc.sSweaterFilterSelect,"popularity");
-        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSweaterLoading));
-        Assert.assertEquals(dc.sSweaterFilterPopularity.getAttribute("selected"), "true");
-        dc.selectByValue(dc.sSweaterFilterSelect,"date");
-        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSweaterLoading));
-        Assert.assertEquals(dc.sSweaterFilterDate.getAttribute("selected"), "true");
-        dc.selectByValue(dc.sSweaterFilterSelect,"price");
-        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSweaterLoading));
-        Assert.assertEquals(dc.sSweaterFilterPrice.getAttribute("selected"), "true");
-        dc.selectByValue(dc.sSweaterFilterSelect,"price-desc");
-        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSweaterLoading));
-        Assert.assertEquals(dc.sSweaterFilterPriceDesc.getAttribute("selected"), "true");
+        dc.selectByValue(dc.sSWSortSelect,"popularity");
+        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSWLoading));
+        Assert.assertEquals(dc.sSWSortPopularity.getAttribute("selected"), "true");
+        dc.selectByValue(dc.sSWSortSelect,"date");
+        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSWLoading));
+        Assert.assertEquals(dc.sSWSortDate.getAttribute("selected"), "true");
+        dc.selectByValue(dc.sSWSortSelect,"price");
+        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSWLoading));
+        Assert.assertEquals(dc.sSWSortPrice.getAttribute("selected"), "true");
+        dc.selectByValue(dc.sSWSortSelect,"price-desc");
+        dc.wait.until(ExpectedConditions.invisibilityOf(dc.sSWLoading));
+        Assert.assertEquals(dc.sSWSortPriceDesc.getAttribute("selected"), "true");
     }
 
 
