@@ -49,6 +49,9 @@ public class Headers extends ParentPage{
     @FindBy(xpath="//span[@class='menu-hover-line' and text()='Philosophy']")
     public WebElement philosophyBtn;
 
+    //US_09_StoreSweater
+    @FindBy(xpath ="//a[@href='/category/sweaters/']")
+    public WebElement sHeaderSweaterIcon;
 
 
 
@@ -62,6 +65,7 @@ public class Headers extends ParentPage{
             case "adresseBtn": return this.adresseBtn;
             case "abmeldenBtn": return this.abmeldenBtn;
             case "philosophyBtn": return this.philosophyBtn;
+            case "sHeaderSweaterIcon": return this.sHeaderSweaterIcon;
 
         }
         return null;

@@ -281,6 +281,7 @@ public class ParentPage {
     }
 
     public void acceptAllCookies() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Akzeptieren')]")));
         List<WebElement> acceptButtons = GWD.getDriver().findElements(By.xpath("//button[contains(text(),'Akzeptieren')]"));
         if (!acceptButtons.isEmpty()) {
             acceptButtons.get(0).click();
