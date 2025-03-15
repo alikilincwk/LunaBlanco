@@ -12,6 +12,13 @@ public class DialogContent extends ParentPage{
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
+    //US_11_Archiv
+    @FindBy(xpath = "//*[@id='main']/div/ul/li[2]/div[1]/a")
+    public WebElement ausverkauftProduct;
+
+    @FindBy(xpath = "//p[contains(@class, 'stock') and contains(@class, 'out-of-stock')]")
+    public WebElement ausverkauftInfo;
+
 
     //US_07_Store Feature/T-Shirts
     @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
@@ -105,6 +112,8 @@ public class DialogContent extends ParentPage{
             case "sSweaterFilterDate":return this.sSWSortDate;
             case "sSweaterFilterPrice":return this.sSWSortPrice;
             case "sSweaterFilterPriceDesc":return this.sSWSortPriceDesc;
+            case "ausverkauftProduct": return ausverkauftProduct;
+            case "ausverkauftInfo": return this.ausverkauftInfo;
 
         }
         return null;

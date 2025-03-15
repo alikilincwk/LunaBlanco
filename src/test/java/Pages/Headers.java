@@ -64,6 +64,7 @@ public class Headers extends ParentPage{
             case "philosophyBtn": return this.philosophyBtn;
             case "sHeaderSweaterIcon": return this.sHeaderSWIcon;
             case "sHeaderHWIcon": return this.sHeaderHWIcon;
+            case "archiv": return this.archiv;
 
         }
         return null;
