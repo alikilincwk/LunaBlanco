@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Headers extends ParentPage{
     public Headers() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -26,6 +28,14 @@ public class Headers extends ParentPage{
     public WebElement headwear;
     @FindBy(xpath="//*[text()='ARCHIV']")
     public WebElement archiv;
+
+    //US_12_ProfileMenu
+
+    @FindBy(xpath = "//*[@id='menu-luna-blanco-my-account-menu']")
+    public List<WebElement> profileSubmenu;
+
+    @FindBy(xpath = "//*[@id='menu-luna-blanco-my-account-menu']/li[4]/a")
+    public WebElement anmeldenBtn;
 
     //US_14_Profile Feature/BESTELLUNGEN
     @FindBy(xpath="//i[@class='far fa-user icons']")
