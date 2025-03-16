@@ -45,4 +45,13 @@ public class _00_DataTable {
         }
     }
 
+    @And("Confirm text message")
+    public void confirmTextMessage(DataTable dtBoxAndTexts) {
+        List<List<String>> listBoxAndTexts = dtBoxAndTexts.asLists(String.class);
+        for (int i = 0; i < listBoxAndTexts.size(); i++) {
+            WebElement box = (dc.getWebElement(listBoxAndTexts.get(i).get(0)));
+            dc.verifyContainsText(box, listBoxAndTexts.get(i).get(1));
+        }
+    }
+
 }

@@ -12,7 +12,6 @@ public class Headers extends ParentPage{
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-
     //US_05_StoreMenu
     @FindBy(linkText = "Store")
     public WebElement store;
@@ -30,7 +29,6 @@ public class Headers extends ParentPage{
     public WebElement archiv;
 
     //US_12_ProfileMenu
-
     @FindBy(xpath = "//*[@id='menu-luna-blanco-my-account-menu']")
     public List<WebElement> profileSubmenu;
 
@@ -61,7 +59,9 @@ public class Headers extends ParentPage{
     @FindBy(xpath ="//a[@href='/category/headwear/']")
     public WebElement sHeaderHWIcon;
 
-
+    //_01_Register, _02_Login
+    @FindBy(xpath ="//a[@class='account-menu-login']")
+    public WebElement headerLogin;
 
     public WebElement getWebElement(String strElementName){
 
@@ -75,6 +75,7 @@ public class Headers extends ParentPage{
             case "sHeaderSweaterIcon": return this.sHeaderSWIcon;
             case "sHeaderHWIcon": return this.sHeaderHWIcon;
             case "archiv": return this.archiv;
+            case "headerLogin": return this.headerLogin;
 
         }
         return null;
