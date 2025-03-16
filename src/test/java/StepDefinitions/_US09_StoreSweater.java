@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class _US09_StoreSweater {
-    Headers h = new Headers();
     DialogContent dc = new DialogContent();
 
 
@@ -26,7 +25,7 @@ public class _US09_StoreSweater {
         dc.scrolltoElement(dc.sSWFirstProduct);
         Assert.assertTrue(Double.parseDouble(dc.sSWAltImage.getCssValue("opacity")) == 0);
         dc.hoverOver(dc.sSWFirstProduct);
-        dc.wait.until( driver -> dc.sSWAltImage.getCssValue("opacity").equals("1"));
+        dc.wait.until(ExpectedConditions.attributeToBe(dc.sSWAltImage,"opacity","1"));
         Assert.assertTrue(Double.parseDouble(dc.sSWAltImage.getCssValue("opacity")) == 1);
     }
 

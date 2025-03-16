@@ -19,7 +19,6 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//p[contains(@class, 'stock') and contains(@class, 'out-of-stock')]")
     public WebElement ausverkauftInfo;
 
-
     //US_07_Store Feature/T-Shirts
     @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
     public List<WebElement> tShirtsProducts;
@@ -86,6 +85,24 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//div[@class='blockUI blockOverlay']")
     public WebElement sSWLoading;
 
+    //_US01_Register, _US02_Login
+    @FindBy(xpath = "//input[@id='reg_email']")
+    public WebElement pRegMail;
+    @FindBy(xpath = "//input[@id='reg_data_privacy']")
+    public WebElement pRegPrvCheck;
+    @FindBy(xpath = "//button[@name='register']")
+    public WebElement pRegButton;
+    @FindBy(xpath = "//div[@role='alert']//div")
+    public WebElement pRegAlert;
+    @FindBy(xpath = "//div[@role='alert']//div//span")
+    public WebElement pLogAlert;
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement pLogUn;
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement pLogPw;
+    @FindBy(xpath = "//button[@name='login']")
+    public WebElement pLogButton;
+
 
     public WebElement getWebElement(String strElementName){
 
@@ -114,6 +131,14 @@ public class DialogContent extends ParentPage{
             case "sSweaterFilterPriceDesc":return this.sSWSortPriceDesc;
             case "ausverkauftProduct": return ausverkauftProduct;
             case "ausverkauftInfo": return this.ausverkauftInfo;
+            case "pRegMail": return this.pRegMail;
+            case "pRegPrvCheck": return this.pRegPrvCheck;
+            case "pRegButton": return this.pRegButton;
+            case "pRegAlert": return this.pRegAlert;
+            case "pLogUn": return this.pLogUn;
+            case "pLogPw": return this.pLogPw;
+            case "pLogButton": return this.pLogButton;
+            case "pLogAlert": return this.pLogAlert;
 
         }
         return null;
