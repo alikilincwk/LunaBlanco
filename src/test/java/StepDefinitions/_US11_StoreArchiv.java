@@ -6,9 +6,8 @@ import Pages.ParentPage;
 import Utilities.GWD;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 
-public class _US11_Archiv {
+public class _US11_StoreArchiv {
 
     Headers headers = new Headers();
     ParentPage parent = new ParentPage();
