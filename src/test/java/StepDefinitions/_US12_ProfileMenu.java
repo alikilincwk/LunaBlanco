@@ -16,7 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class _US12_ProfileMenu {
-
     Headers headers = new Headers();
 
     @Then("Submenu should be seen")
