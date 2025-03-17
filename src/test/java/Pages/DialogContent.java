@@ -15,32 +15,24 @@ public class DialogContent extends ParentPage{
     //US_11_Archiv
     @FindBy(xpath = "//*[@id='main']/div/ul/li[2]/div[1]/a")
     public WebElement ausverkauftProduct;
-
     @FindBy(xpath = "//p[contains(@class, 'stock') and contains(@class, 'out-of-stock')]")
     public WebElement ausverkauftInfo;
 
     //US_13_Profile Mein Konto
     @FindBy(xpath = "//*[@id='customer_login']/div[1]/h4")
     public WebElement anmeldenText;
-
     @FindBy(xpath = "//*[@id='customer_login']/div[1]/form/p[1]/label")
     public WebElement benutzernameOdereMail;
-
     @FindBy(xpath = "//*[@id='customer_login']/div[1]/form/p[2]/label")
     public WebElement passwort;
-
     @FindBy(xpath = "//*[@id='customer_login']/div[2]/h4")
     public WebElement registrierenText;
-
     @FindBy(xpath = "//*[@id='customer_login']/div[2]/form/p[1]/label")
     public WebElement eMailAdresse;
-
     @FindBy(xpath = "//*[@id='username']")
     public WebElement usernameField;
-
     @FindBy(xpath = "//*[@id='password']")
     public WebElement passwordField;
-
     @FindBy(xpath = "//*[@id='reg_email']")
     public WebElement regEmailField;
 
@@ -128,6 +120,14 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//button[@name='login']")
     public WebElement pLogButton;
 
+    //_US21_Wishlist
+    @FindBy(xpath = "//div[contains(@class,'wishlist-message')]")
+    public WebElement wLAlert;
+    @FindBy(xpath = "(//i[contains(@data-original-title,'Wunschliste')])[1]")
+    public WebElement wLFirstProduct;
+    @FindBy(xpath = "//p[contains(@class,'wishlist')]")
+    public WebElement wLNoProduct;
+
 
     public WebElement getWebElement(String strElementName){
 
@@ -164,6 +164,9 @@ public class DialogContent extends ParentPage{
             case "pLogPw": return this.pLogPw;
             case "pLogButton": return this.pLogButton;
             case "pLogAlert": return this.pLogAlert;
+            case "wLFirstProduct": return this.wLFirstProduct;
+            case "wLAlert": return this.wLAlert;
+            case "wLNoProduct": return this.wLNoProduct;
 
         }
         return null;
