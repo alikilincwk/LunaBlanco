@@ -35,6 +35,10 @@ public class Headers extends ParentPage{
     @FindBy(xpath = "//*[@id='menu-luna-blanco-my-account-menu']/li[4]/a")
     public WebElement anmeldenBtn;
 
+    //US_13_Profile Mein Konto
+    @FindBy(xpath = "//*[@id='menu-item-52013']/a")
+    public WebElement meinKontoBtn;
+
     //US_14_Profile Feature/BESTELLUNGEN
     @FindBy(xpath="//i[@class='far fa-user icons']")
     public WebElement userProfile;
@@ -76,7 +80,7 @@ public class Headers extends ParentPage{
             case "sHeaderHWIcon": return this.sHeaderHWIcon;
             case "archiv": return this.archiv;
             case "headerLogin": return this.headerLogin;
-
+            case "meinKonto": return this.meinKontoBtn;
         }
         return null;
     }
