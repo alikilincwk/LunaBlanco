@@ -19,6 +19,31 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//p[contains(@class, 'stock') and contains(@class, 'out-of-stock')]")
     public WebElement ausverkauftInfo;
 
+    //US_13_Profile Mein Konto
+    @FindBy(xpath = "//*[@id='customer_login']/div[1]/h4")
+    public WebElement anmeldenText;
+
+    @FindBy(xpath = "//*[@id='customer_login']/div[1]/form/p[1]/label")
+    public WebElement benutzernameOdereMail;
+
+    @FindBy(xpath = "//*[@id='customer_login']/div[1]/form/p[2]/label")
+    public WebElement passwort;
+
+    @FindBy(xpath = "//*[@id='customer_login']/div[2]/h4")
+    public WebElement registrierenText;
+
+    @FindBy(xpath = "//*[@id='customer_login']/div[2]/form/p[1]/label")
+    public WebElement eMailAdresse;
+
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement usernameField;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement passwordField;
+
+    @FindBy(xpath = "//*[@id='reg_email']")
+    public WebElement regEmailField;
+
     //US_07_Store Feature/T-Shirts
     @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
     public List<WebElement> tShirtsProducts;

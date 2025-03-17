@@ -12,7 +12,7 @@ Feature: Profile Feature
 
   Scenario: Verify the User Information Page
     When Click on the Element in Header
-    |Mein Konto|
+      | meinKonto |
     And User Profile page should be seen
     Then Field names should be displayed
     Then Fields should be clickable and writable
