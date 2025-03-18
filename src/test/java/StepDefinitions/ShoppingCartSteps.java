@@ -27,7 +27,7 @@ public class ShoppingCartSteps {
     @When("The Customer increases the amount of products in the shopping cart and clicks the update shopping cart button")
     public void theCustomerIncreasesTheAmountOfProductsInTheShoppingCartAndClicksTheUpdateShoppingCartButton() {
         int maxValue = Integer.parseInt(Objects.requireNonNull(sc.productQuantity.getAttribute("max")));
-        String stValue = String.valueOf(sc.randomGenerator(maxValue));
+        String stValue = String.valueOf(sc.randomGenerator(maxValue)+1);
         sc.mySendKeys(sc.productQuantity, stValue);
         sc.wait.until(ExpectedConditions.elementToBeClickable(sc.updateCartBtn));
         sc.myClick(sc.updateCartBtn);
@@ -36,10 +36,10 @@ public class ShoppingCartSteps {
 
     @Then("The Customer verifies the product subtotal price")
     public void theCustomerVerifiesTheProductSubtotalPrice() {
-        double productPrice = Double.parseDouble(sc.productPrice.getText().replaceAll("[^0-9,.]", "").replace(",", ".").replace(",", "."));
+        double productPrice = Double.parseDouble(sc.productPrice.getText().replaceAll("[^0-9,.]", "").replace(",", "."));
         double productQuantity = Double.parseDouble(Objects.requireNonNull(sc.productQuantity.getAttribute("value")));
         double total = (productPrice * productQuantity);
-        double subTotal = Double.parseDouble(sc.productSubTotal.getText().replaceAll("[^0-9,.]", "").replace(",", ".").replace(",", "."));
+        double subTotal = Double.parseDouble(sc.productSubTotal.getText().replaceAll("[^0-9,.]", "").replace(",", "."));
         System.out.println(total);
         System.out.println(subTotal);
         Assert.assertEquals(subTotal, total);
