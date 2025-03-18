@@ -129,6 +129,183 @@ public class DialogContent extends ParentPage{
     public WebElement wLNoProduct;
 
 
+    //_US_20_Checkout
+    @FindBy(css = "[class='woocommerce-loop-product__title']")
+    public List<WebElement> productList;
+
+    @FindBy(css = "[class='product_title entry-title alt-font']")
+    public WebElement productTitle;
+
+    @FindBy(css = "[class='price alt-font'] bdi")
+    public WebElement productTitlePrice;
+
+    @FindBy(css = "[class='woocommerce-product-details__short-description']")
+    public List<WebElement> productDetails;
+
+    @FindBy(css = "[class*='2-5-werktage']")
+    public WebElement shippingDay;
+
+    @FindBy(css = "[class*='size-guide-link']")
+    public List<WebElement> sizeGuideButton;
+
+    @FindBy(css = "[class='size-chart-popup-heading']")
+    public WebElement sizeChart;
+
+    @FindBy(css = "[title='Close (Esc)']")
+    public WebElement xButton;
+
+    @FindBy(css = "[class='stock alt-font in-stock']")
+    public List<WebElement> inStockText;
+
+    @FindBy(css = "[class='stock alt-font out-of-stock']")
+    public List<WebElement> outOfStockText;
+
+    @FindBy(css = "[class*='single_add_to_cart_button']")
+    public WebElement addToCartButton;
+
+    @FindBy(css = "[class='hongo-swatch hongo-attribute-label']")
+    public List<WebElement> sizeList;
+
+    @FindBy(css = "[class*='wrap is_stuck'] li img")
+    public List<WebElement> imageList;
+
+    @FindBy(xpath = "(//*[text()='Waschhinweise'])[1]")
+    public WebElement washingInstructions;
+
+    @FindBy (xpath = "(//*[text()='Zusätzliche Informationen'])[1]")
+    public WebElement additionalInfo;
+
+    @FindBy(css = "[id*='tab-hongo'] li")
+    public List<WebElement> washingText;
+
+    @FindBy(css = "[class*='attributes-item__value']")
+    public List<WebElement> additionalInfoText;
+
+    @FindBy (css = "[class*='woocommerce-message alert']")
+    public WebElement addToCartVerify;
+
+    @FindBy(css = "[class='icon-bag hongo-cart-icon']")
+    public WebElement shoppingCardIcon;
+
+    @FindBy(css = "[class='button checkout wc-forward']")
+    public WebElement checkoutBtn;
+
+    @FindBy(id = "billing_first_name")
+    public WebElement firstNamePl;
+
+    @FindBy(id = "billing_last_name")
+    public WebElement lastNamePl;
+
+    @FindBy(id = "select2-billing_country-container")
+    public WebElement countrySelect;
+
+    @FindBy(css = "[class='select2-results__options'] li")
+    public List<WebElement> countryList;
+
+    @FindBy(css = "[id='billing_address_1']")
+    public WebElement billingAddressPl;
+
+    @FindBy(css = "[id='billing_city']")
+    public WebElement billingCityPl;
+
+    @FindBy(css = "[id='billing_postcode']")
+    public WebElement billingPostCodePl;
+
+    @FindBy(css = "[id='billing_phone']")
+    public WebElement billingPhonePl;
+
+    @FindBy(css = "[id='billing_email']")
+    public WebElement billingEmailPl;
+
+    @FindBy(css = "[class='input-checkbox']")
+    public WebElement checkBOx;
+
+    @FindBy(id = "createaccount")
+    public WebElement createAccountCheck;
+
+    @FindBy(id="ship-to-different-address-checkbox")
+    public WebElement differentAddressCheck;
+
+    @FindBy(css = "[class='product-total'] bdi")
+    public List<WebElement> productTotal;
+
+    @FindBy(css = "[class='cart-subtotal'] bdi")
+    public WebElement subTotal;
+
+    @FindBy(xpath = "(//td[@data-title='Versand']//span//bdi)[1]")
+    public WebElement dhlPrice;
+
+    @FindBy(css = "[class='order-total alt-font'] bdi")
+    public WebElement totalPrice;
+
+    @FindBy(css = "[id*='payment_method_']")
+    public List<WebElement> paymentRadioButtons;
+
+    @FindBy(xpath = "(//*[@class='__PrivateStripeElement']/iframe)[3]")
+    public WebElement iframePayment;
+
+    @FindBy(css = "[class='p-CardNumberInput'] input")
+    public WebElement cardNumber;
+
+    @FindBy(css = "[id='Field-expiryInput']")
+    public WebElement expirationDate;
+
+    @FindBy(css = "[id='Field-cvcInput']")
+    public WebElement securityCode;
+
+    @FindBy (xpath = "(//*[@class='blockUI blockOverlay'])[1]")
+    public WebElement ccLoadingBar;
+
+    @FindBy (css = "[id='place_order']")
+    public WebElement orderNowButton;
+
+    @FindBy(css="[class='woocommerce-error'] li")
+    public WebElement errorMessage;
+
+    @FindBy(css = "[id='wc-stripe-express-checkout-button-separator']")
+    public WebElement OderText;
+
+    //_US_18_ShoppingCart
+    @FindBy(xpath = "(//*[@class='icon-eye icons'])[1]")
+    public WebElement productIconEye;
+
+    @FindBy(css = "[class='hongo-cart-message alt-font']")
+    public WebElement successfullyMessage;
+
+    @FindBy(css = "[class='button wc-forward']")
+    public WebElement showShoppingCartBtn;
+
+    @FindBy(css = "[name='update_cart']")
+    public WebElement updateCartBtn;
+
+    @FindBy(css = "[class='input-text qty text']")
+    public WebElement productQuantity;
+
+    @FindBy(css = "[class='product-price'] bdi")
+    public WebElement productPrice;
+
+    @FindBy(css = "[class='product-subtotal'] bdi")
+    public WebElement productSubTotal;
+
+    @FindBy(css = "[class*='empty-cart']")
+    public WebElement cartEmptyBtn;
+
+    @FindBy(css = "[class='cart-empty alt-font']")
+    public WebElement cartEmptyMessage;
+
+    @FindBy(xpath = "(//*[@class='blockUI blockOverlay'])[1]")
+    public WebElement blockOverlay;
+
+    //_US_19_CouponCode
+    @FindBy(id = "coupon_code")
+    public WebElement couponCodePlc;
+
+    @FindBy(name = "apply_coupon")
+    public WebElement applyCouponBtn;
+
+    @FindBy(css = "[id='coupon-error-notice']")
+    public WebElement errorCouponCode;
+
     public WebElement getWebElement(String strElementName){
 
         switch (strElementName.trim())
