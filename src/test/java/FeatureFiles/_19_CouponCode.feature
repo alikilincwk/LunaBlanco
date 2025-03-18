@@ -1,9 +1,9 @@
-Feature: ShoppingCart
+Feature: CouponCode
 
   Background:
     Given Navigate to LunaBlanco
 
-  Scenario: ShoppingCart Functionality
+  Scenario: CouponCode Functionality
     When The Customer clicks on any product
     Then The Customer confirms the existence of information text about the product(Fabric information,Delivery time,Price information)
     And The Customer clicks on the size chart unit and verifies that the chart opens

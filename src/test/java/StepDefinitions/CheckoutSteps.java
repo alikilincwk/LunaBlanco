@@ -37,6 +37,8 @@ public class CheckoutSteps {
     public void theCustomerClicksOnTheSizeChartUnitAndVerifiesThatTheChartOpens() {
         if (!ch.sizeGuideButton.isEmpty()) {
             ch.myClick(ch.sizeGuideButton.get(0));
+            ch.wait.until(ExpectedConditions.textToBePresentInElement(ch.sizeChart,"Größentabelle"));
+            System.out.println(ch.sizeChart.getText());
             Assert.assertTrue(ch.sizeChart.isDisplayed(), "Error");
             ch.myClick(ch.xButton);
         } else {
