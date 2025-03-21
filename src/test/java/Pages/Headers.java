@@ -28,6 +28,27 @@ public class Headers extends ParentPage{
     @FindBy(xpath="//*[text()='ARCHIV']")
     public WebElement archiv;
 
+    //US_06_StoreAllePieces
+    @FindBy(xpath="//*[text()='Filter']")
+    public WebElement filter;
+    @FindBy (xpath ="//*[@class='hongo-product-taxonomy-filter-wrap hongo-product-taxonomy-filter-wrap-ajax']")
+    public WebElement listOfcatagories;
+    @FindBy(xpath = "//*[@class='farbe clearfix hongo-attribute-filter-ajax hongo-attribute-filter']")
+    public WebElement listOfcolors;
+    @FindBy(xpath = "//*[@class='groesse clearfix hongo-attribute-filter-ajax hongo-attribute-filter']")
+    public WebElement listOfsizes;
+    @FindBy(xpath = "//*[@class='hongo-active-filter hongo-active-filter-ajax']")
+    public WebElement listOffilteredItems;
+    @FindBy(xpath = "//*[@class='hongo-column-switch']")
+    public WebElement listViewForm;
+    @FindBy(xpath = "(//*[@class='col-md-12 col-xs-12 sidebar hongo-woocommerce-top-sidebar hongo-top-filter-sidebar']/following::ul)[1]")
+    public WebElement itemView;
+    @FindBy(xpath="//*[text()='Zurücksetzen']")
+    public WebElement Zurücksetzen;
+    @FindBy(css = "[class='orderby select2-hidden-accessible']")
+    public  WebElement sortSelection;
+
+
     //US_12_ProfileMenu
     @FindBy(xpath = "//*[@id='menu-luna-blanco-my-account-menu']")
     public List<WebElement> profileSubmenu;
@@ -81,6 +102,13 @@ public class Headers extends ParentPage{
             case "archiv": return this.archiv;
             case "headerLogin": return this.headerLogin;
             case "meinKonto": return this.meinKontoBtn;
+            //US06
+            case "ALLE PIECES": return this.allPieces;
+            case "T-SHIRTS": return this.tShirts;
+            case "HOODIES": return this.hoodies;
+            case "SWEATER": return this.sweater;
+            case "HEADWEAR": return this.headwear;
+            case "ARCHIV":return this.archiv;
         }
         return null;
     }

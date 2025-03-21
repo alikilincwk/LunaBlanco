@@ -1,5 +1,3 @@
-
-
 Feature: Store Functionality
 
 
