@@ -40,6 +40,22 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
     public List<WebElement> tShirtsProducts;
 
+    //US_23_Customer Service/Kontakt
+    @FindBy(xpath = "//a[@class='navigation-links' and text()='Kontakt']")
+    public WebElement kontaktBtn;
+    @FindBy(xpath = "(//div[@class='sub-title alt-font'])[2]")
+    public WebElement telephoneNumberBox;
+    @FindBy(xpath = "(//div[@class='sub-title alt-font'])[3]")
+    public WebElement eMailBox;
+
+    //US_24_Customer Service/Shipping and Returns
+    @FindBy(xpath = "//a[@class='navigation-links' and text()='Versand & Rückversand']")
+    public WebElement shippingAndReturnsBtn;
+    @FindBy(xpath = "//a[@class='navigation-links' and text()='Versand & Rückversand']")
+    public WebElement returnPeriodBox;
+    @FindBy(xpath = "//div[starts-with(@class,'text-block-content hongo-text-block-1')]//h3")
+    public List<WebElement> shippingAreasBoxes;
+
     //US_25_About Us/AGB
     @FindBy(xpath = "//a[@class='navigation-links' and text()='AGB']")
     public WebElement agbBtn;
@@ -349,10 +365,13 @@ public class DialogContent extends ParentPage{
         return null;
     }
 
-
-
     //US_07_Store Feature/T-Shirts method
     public List<WebElement> getTsirtsProducts() {
         return this.tShirtsProducts;
+    }
+
+    //US_24_Customer Service/Shipping and Returns method
+    public List<WebElement> getShippingAreasBoxes() {
+        return this.shippingAreasBoxes;
     }
 }
