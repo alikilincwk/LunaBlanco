@@ -40,6 +40,23 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//ul[contains(@class, 'products')]//h2[@class='woocommerce-loop-product__title']")
     public List<WebElement> tShirtsProducts;
 
+    //_US08_StoreHoodies
+    @FindBy(xpath = "//h1[text()='Hoodies']")
+    public WebElement hoodiesTitle;
+    @FindBy(xpath = "//ul[contains(@class,'hongo-text-center')]//div[@class='product-thumb-wrap']")
+    public List<WebElement> allhoodies;
+
+
+    //US_22
+    @FindBy(xpath = "//a[text()='FAQs']")
+    public WebElement faQs;
+
+    @FindBy(xpath = "//h1[text()='FAQs']")
+    public WebElement fAQsTitle;
+
+    @FindBy(css = "[class='wpb-content-wrapper'] i")
+    public List <WebElement> plusIcon;
+
     //US_23_Customer Service/Kontakt
     @FindBy(xpath = "//a[@class='navigation-links' and text()='Kontakt']")
     public WebElement kontaktBtn;
@@ -360,7 +377,7 @@ public class DialogContent extends ParentPage{
             case "wLFirstProduct": return this.wLFirstProduct;
             case "wLAlert": return this.wLAlert;
             case "wLNoProduct": return this.wLNoProduct;
-
+            case "faQs": return this.faQs;
         }
         return null;
     }
