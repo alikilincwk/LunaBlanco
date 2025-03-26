@@ -67,6 +67,8 @@ public class ParentPage {
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
     }
 
+
+
     public String jsGetText(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
@@ -281,6 +283,7 @@ public class ParentPage {
     }
 
     public void acceptAllCookies() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Akzeptieren')]")));
         List<WebElement> acceptButtons = GWD.getDriver().findElements(By.xpath("//button[contains(text(),'Akzeptieren')]"));
         if (!acceptButtons.isEmpty()) {
             acceptButtons.get(0).click();

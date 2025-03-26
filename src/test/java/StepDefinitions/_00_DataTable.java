@@ -9,12 +9,13 @@ import java.util.List;
 
 public class _00_DataTable {
     DialogContent dc = new DialogContent();
+    Headers h=new Headers();
 
-    @And("Click on the Element in LeftNav")
-    public void clickOnTheElementInLeftNav(DataTable dtLinks) {
+    @And("Click on the Element in Header")
+    public void clickOnTheElementInHeader(DataTable dtLinks) {
         List<String> listLinks = dtLinks.asList(String.class);
         for (int i = 0; i < listLinks.size(); i++) {
-            dc.myClick(dc.getWebElement(listLinks.get(i)));
+            h.myClick(h.getWebElement(listLinks.get(i)));
         }
     }
 
@@ -35,12 +36,21 @@ public class _00_DataTable {
         }
     }
 
-    @And("User send keys in LeftNav")
-    public void userSendKeysInLeftNav(DataTable dtBoxAndTexts) {
+    @And("User send keys in Header")
+    public void userSendKeysInHeader(DataTable dtBoxAndTexts) {
+        List<List<String>> listBoxAndTexts = dtBoxAndTexts.asLists(String.class);
+        for (int i = 0; i < listBoxAndTexts.size(); i++) {
+            WebElement box = (h.getWebElement(listBoxAndTexts.get(i).get(0)));
+            h.mySendKeys(box, listBoxAndTexts.get(i).get(1));
+        }
+    }
+
+    @And("Confirm text message")
+    public void confirmTextMessage(DataTable dtBoxAndTexts) {
         List<List<String>> listBoxAndTexts = dtBoxAndTexts.asLists(String.class);
         for (int i = 0; i < listBoxAndTexts.size(); i++) {
             WebElement box = (dc.getWebElement(listBoxAndTexts.get(i).get(0)));
-            dc.mySendKeys(box, listBoxAndTexts.get(i).get(1));
+            dc.verifyContainsText(box, listBoxAndTexts.get(i).get(1));
         }
     }
 

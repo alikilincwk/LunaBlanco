@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Pages.DialogContent;
 import Pages.Headers;
 import Pages.ParentPage;
 import Utilities.GWD;
@@ -8,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StoreHoverOver {
+public class _US05_StoreMenu {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();;
 

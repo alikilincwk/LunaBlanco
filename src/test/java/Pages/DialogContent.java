@@ -1,8 +1,6 @@
 package Pages;
 
 import Utilities.GWD;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -32,20 +30,9 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//a[@class='navigation-links' and contains(@href, 'datenschutzerklaerung')]")
     public WebElement DatenschutzerklärungBtn;
 
-    //US_28_Impressum
-    @FindBy(xpath = "//a[contains(@class, 'navigation-links') and contains(text(), 'Impressum')]")
-    public WebElement ImpressumBtn;
 
-    //US_29_Instagram Logo
-    @FindBy (xpath = "//i[contains(@class, 'fa-instagram')]")
-    public WebElement instagramButton;
 
-    //US_30_Newsletter
-    @FindBy(xpath = "//input[@name='email']")
-    public WebElement emailInput;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement submitButton;
 
 
     public WebElement getWebElement(String strElementName){
@@ -65,7 +52,4 @@ public class DialogContent extends ParentPage{
     public List<WebElement> getTsirtsProducts() {
         return this.tShirtsProducts;
     }
-
-
-
 }
