@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-public class CheckoutSteps {
+public class _US20_Checkout {
     DialogContent ch = new DialogContent();
     Faker dataFaker = new Faker();
 

@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 import java.util.Objects;
 
-public class ShoppingCartSteps {
+public class _US18_ShoppingCart {
     DialogContent sc = new DialogContent();
 
     @And("The Customer hovers over the shopping cart and clicks the view shopping cart button")

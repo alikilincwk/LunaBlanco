@@ -9,12 +9,14 @@ Feature: Hoodies Functionality
       | HOODIES |
     Then Confirm that user is in the hoodies page
 
-    And Make a column selection
+    And the user selects a column layout
     Then Verify that hovering over a product changes its picture
     Then Click on the Element in Dialog
       | sSweaterFilter |
 
-    And Filter products by its colours
-    And Filter products by its size
+    And the user filters products by colour
+    Then the displayed products should match the selected colour filter
+    And the user filters products by size
+    Then the displayed products should match the selected size filter
     And Filter product by price
-    And Sort by categories
+    And the user sorts products by category
