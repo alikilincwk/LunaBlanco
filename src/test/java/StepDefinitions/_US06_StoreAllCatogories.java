@@ -3,7 +3,6 @@ package StepDefinitions;
 import Pages.DialogContent;
 import Pages.Headers;
 import Utilities.GWD;
-import Utilities.HelperMethods;
 import Utilities.MyFunc;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
