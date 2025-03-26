@@ -75,6 +75,7 @@ public class _US06_StoreAllCatogories {
             clickToListElement(colorList);
         List<WebElement> sizeList = headers.listOfsizes.findElements(By.tagName("li"));
             clickToListElement(sizeList);
+            //
 
 
         //Filtered Items Assertion
