@@ -30,6 +30,16 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//a[@class='navigation-links' and contains(@href, 'datenschutzerklaerung')]")
     public WebElement DatenschutzerklärungBtn;
 
+    //US_28_Impressum
+    @FindBy(xpath = "//a[contains(@class, 'navigation-links') and contains(text(), 'Impressum')]")
+    public WebElement ImpressumBtn;
+
+    //US_30_Newsletter
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailInput;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitButton;
 
 
 
