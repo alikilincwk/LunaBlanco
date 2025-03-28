@@ -82,6 +82,26 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//a[@class='navigation-links' and contains(@href, 'datenschutzerklaerung')]")
     public WebElement DatenschutzerklärungBtn;
 
+    //US_28_AboutUsImpressum
+    @FindBy(xpath = "//a[contains(@class, 'navigation-links') and contains(text(), 'Impressum')]")
+    public WebElement ImpressumBtn;
+
+    //US_29_InstagramLogo
+    @FindBy(css="[class='fa-brands fa-instagram']")
+    public WebElement InstagramLogo;
+
+    @FindBy(xpath = "(//div[@role='button'][@tabindex='0'])[3]")
+    public WebElement closeButton;
+
+    //US_30_NewsLetter
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailInput;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitButton;
+
+
+
     //US_09_StoreSweater, _US10_StoreHeadwear
     @FindBy(xpath = "//h1[contains(text(),title)]")
     public WebElement sSWTitle;
