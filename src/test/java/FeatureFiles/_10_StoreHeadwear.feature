@@ -6,14 +6,18 @@ Feature: Head Wears
     Then Sub-Categories should be seen
 
   Scenario: Checking Head Wears
-    And Click on the Element in Header
+    When Click on the Element in Header
       | sHeaderHWIcon |
-    Then Confirm that user is in the head wear page
-    Then Confirm that hovering over a product changes its picture
-    And Click on the Element in Dialog
+    Then the user should be redirected to the headwear page
+    When the user hover over the product
+    Then hovering over a product should change its picture
+    When Click on the Element in Dialog
       | sSweaterFilter |
-    And Filter products by its colours
-    And Filter products by its size
-    And Filter products by its price range
-    And Make a column selection
-    And Sort by categories
+    And the user filters products by colour
+    Then the displayed products should match the selected colour filter
+    And the user filters products by size
+    Then the displayed products should match the selected size filter
+    And the user filters products by price range
+    Then the displayed products should match the selected price range filter
+    And the user selects a column layout
+    And the user sorts products by category

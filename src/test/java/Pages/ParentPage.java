@@ -67,8 +67,6 @@ public class ParentPage {
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
     }
 
-
-
     public String jsGetText(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();

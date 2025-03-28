@@ -5,7 +5,6 @@ import Pages.Headers;
 import Utilities.GWD;
 import Utilities.MyFunc;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.datatable.internal.difflib.myers.MyersDiff;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,8 +14,6 @@ import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class _US06_StoreAllCatogories {
 
@@ -72,35 +69,13 @@ public class _US06_StoreAllCatogories {
         headers.myClick(headers.filter);
 
         List<WebElement> catagoryList = headers.listOfcatagories.findElements(By.tagName("li"));
-        List<WebElement> sizeList = headers.listOfsizes.findElements(By.tagName("li"));
+            clickToListElement(catagoryList);
         List<WebElement> colorList = headers.listOfcolors.findElements(By.tagName("li"));
+            clickToListElement(colorList);
+        List<WebElement> sizeList = headers.listOfsizes.findElements(By.tagName("li"));
+            clickToListElement(sizeList);
+            //
 
-        for (int l = 0; l < catagoryList.size(); l++) {
-            catagoryList = headers.listOfcatagories.findElements(By.tagName("li"));
-            headers.myClick(catagoryList.get(l).findElement(By.tagName("span")));
-            MyFunc.Bekle(2);
-            break;
-        }
-        for (int k = 0; k < colorList.size(); k++) {
-            colorList = headers.listOfcolors.findElements(By.tagName("li"));
-            headers.myClick(colorList.get(k).findElement(By.tagName("span")));
-            MyFunc.Bekle(2);
-            break;
-        }
-
-        for (int r = 1; r < sizeList.size(); r++) {
-            sizeList = headers.listOfsizes.findElements(By.tagName("li"));
-            headers.myClick(sizeList.get(r).findElement(By.tagName("span")));
-            MyFunc.Bekle(2);
-
-//                    WebElement sizeBack=GWD.getDriver().findElement(By.xpath("//li[contains(@class, 'wc-layered-nav-term') and contains(@class, 'active')]//span"));
-//
-//                    headers.myClick(sizeBack);
-//                    MyFunc.Bekle(2);
-//            //assertion
-//                    headers.myClick(sizeList.get(r).findElement(By.tagName("span")));
-            break;
-        }
 
         //Filtered Items Assertion
         List<WebElement> filteredItemsList=headers.listOffilteredItems.findElements(By.tagName("li"));
@@ -108,13 +83,21 @@ public class _US06_StoreAllCatogories {
 
             switch (filteredItemsList.get(m).getText())
             {
-                case "Black": Assert.assertEquals(filteredItemsList.get(m).getText(),"Black");break;
-                case "S":Assert.assertEquals(filteredItemsList.get(m).getText(),"S");break;
-                case "T-Shirts": Assert.assertEquals(filteredItemsList.get(m).getText(),"T-Shirts");break;
+                case "Black":headers.verifyContainsText(filteredItemsList.get(m),"Black");break;
+                case "S":headers.verifyContainsText(filteredItemsList.get(m),"S");break;
+                case "T-Shirts": headers.verifyContainsText(filteredItemsList.get(m),"T-Shirts");break;
             }
         }
     }
-
+    public static void clickToListElement(List<WebElement> list) {
+        if (list != null && !list.isEmpty()) {
+            for (WebElement element : list) {
+                element.findElement(By.tagName("span")).click();
+                MyFunc.Bekle(2);
+                break;
+            }
+        }
+    }
     @Then("view products in choosen form")
     public void viewProductsInChoosenForm() {
         GWD.getDriver().get("https://lunablanco.com/");

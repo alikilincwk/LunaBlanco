@@ -5,7 +5,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class CouponCodeSteps {
+public class _US19_CouponCode {
     DialogContent cc = new DialogContent();
     Faker dataFaker = new Faker();
 

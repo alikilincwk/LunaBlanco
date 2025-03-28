@@ -22,6 +22,7 @@ public class _US08_StoreHoodies {
     @Then("Verify that hovering over a product changes its picture")
     public void verifyThatHoveringOverAProductChangesItsPicture() {
         for (int i = 0; i < dc.allhoodies.size(); i++) {
+            dc.scrolltoElement(dc.allhoodies.get(i));
             dc.hoverOver(dc.allhoodies.get(i));
             Assert.assertEquals(Integer.parseInt(dc.allhoodies.get(i).getCssValue("opacity")), 1);
         }
