@@ -81,7 +81,6 @@ Below are the user stories tested in this project:
 - [**alikilincwk**](mailto:alikilinc.wk@gmail.com)
 - [**AlizaminMammadli**](mailto:elizaminmemmedli@gmail.com)
 - [**betulgozlukoglu**](mailto:gozlukoglubetul@gmail.com)
-- [**EbulfezMahmudzade**](mailto:abulfazmahmudzada@outlook.com)
 - [**Gunay4**](mailto:gun1githb@gmail.com)
 - [**ilknurnese**](mailto:ilknurnese@gmail.com)
 - [**KadriyeAl**](mailto:kadriyealsancak@gmail.com)
