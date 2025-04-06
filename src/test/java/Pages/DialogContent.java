@@ -12,6 +12,10 @@ public class DialogContent extends ParentPage{
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
+
+    Headers header = new Headers();
+
+
     //US_11_Archiv
     @FindBy(xpath = "//*[@id='main']/div/ul/li[2]/div[1]/a")
     public WebElement ausverkauftProduct;
@@ -352,6 +356,22 @@ public class DialogContent extends ParentPage{
             case "wLAlert": return this.wLAlert;
             case "wLNoProduct": return this.wLNoProduct;
             case "faQs": return this.faQs;
+
+            // us_04
+            case "Logo":
+                return header.homepageLogo;
+            case "Home":
+                return header.home;
+            case "Store":
+                return header.store;
+            case "Philosophy":
+                return header.philosophyBtn;
+            case "Profile":
+                return header.profile;
+            case "Shopping Cart":
+                return header.shoppingCart;
+            //default: throw new IllegalArgumentException("Unknown element name: " + strElementName);
+
         }
         return null;
     }
@@ -365,4 +385,31 @@ public class DialogContent extends ParentPage{
     public List<WebElement> getShippingAreasBoxes() {
         return this.shippingAreasBoxes;
     }
+
+
+    //US_O3_HomepageLogo
+
+    @FindBy(xpath = "//a[@class=\"logo-light\"]//img[@alt=\"luna blanco°\"]")
+    public WebElement homepageLogo;
+
+    // US_04_TopNav
+
+
+    @FindBy(xpath = "//span[@class=\"menu-hover-line\"][normalize-space()=\"Home\"]")
+    public WebElement home;
+
+    @FindBy(linkText = "Store")
+    public WebElement store;
+
+    @FindBy(xpath = "//span[normalize-space()='Philosophy']")
+    public WebElement philosophy;
+
+    @FindBy(xpath = "//i[@class='far fa-user icons']")
+    public WebElement profile;
+
+    @FindBy(xpath = "//div[@class='hongo-cart-top-counter']//i[@class='icon-bag hongo-cart-icon']")
+    public WebElement shoppingCart;
+
+
+
 }

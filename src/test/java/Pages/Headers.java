@@ -109,7 +109,43 @@ public class Headers extends ParentPage{
             case "SWEATER": return this.sweater;
             case "HEADWEAR": return this.headwear;
             case "ARCHIV":return this.archiv;
+
+            //us04
+            case "Logo": return this.homepageLogo;
+            case "Home": return this.home;
+            case "Profile": return this.profile;
+
+            case "Philosophy": return this.philosophyBtn;  //?
+
+            case "Shopping Cart": return this.shoppingCart;
+            case "Store": return this.store;
+
+
         }
         return null;
     }
+
+    //us04
+    @FindBy(xpath = "//i[@class='far fa-user icons']")
+    public WebElement profile;
+
+    @FindBy( xpath="//div[@class='hongo-cart-top-counter']//i[@class='icon-bag hongo-cart-icon']")
+    public WebElement shoppingCart;
+
+    @FindBy(xpath = "//a[@class=\"logo-light\"]//img[@alt=\"luna blanco°\"]")
+    public WebElement homepageLogo;
+
+    @FindBy(xpath = "//span[@class=\"menu-hover-line\"][normalize-space()=\"Home\"]")
+    public WebElement home;
+
+    @FindBy(xpath = "//p[@class='woocommerce-mini-cart__empty-message alt-font']")
+    public WebElement emptyCartText;
+
+    // US_031_NachOben
+    @FindBy(xpath = "//span[normalize-space()='NACH OBEN']")
+    public WebElement nachObenBtn;
+
+    @FindBy(xpath = "//i[@class='icon-extra-small fas fa-arrow-down']")
+    public WebElement arrowDownBtn;
+
 }
