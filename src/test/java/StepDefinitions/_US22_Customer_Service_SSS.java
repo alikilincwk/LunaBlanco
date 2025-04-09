@@ -11,20 +11,20 @@ import org.testng.Assert;
 public class _US22_Customer_Service_SSS {
     DialogContent dc = new DialogContent();
 
-    @When("Click on the FAQs element")
-    public void clickOnTheFAQsElement() {
+    @When("the customer clicks on the FAQs element")
+    public void theCustomerClicksOnTheFAQsElement() {
         dc.scrolltoElement(dc.faQs);
         dc.faQs.click();
     }
 
-    @Then("Verify the FAQs page appear")
-    public void verifyTheFAQsPageAppear() {
+    @Then("the customer verifies the FAQs page appear")
+    public void theCustomerVerifiesTheFAQsPageAppear() {
         dc.wait.until(ExpectedConditions.visibilityOf(dc.fAQsTitle));
         Assert.assertTrue(dc.fAQsTitle.getText().toLowerCase().contains("FAQs".toLowerCase()));
     }
 
-    @And("click on the plus icon, the solution suggestions for the questions should appear.")
-    public void clickOnThePlusIconTheSolutionSuggestionsForTheQuestionsShouldAppear() {
+    @And("the customer clicks on the plus icon and sees the solution suggestions for the questions should appear")
+    public void theCustomerClicksOnThePlusIconAndSeesTheSolutionSuggestionsForTheQuestionsShouldAppear() {
         for (int i = 0; i < dc.plusIcon.size(); i++) {
             dc.scrolltoElement(dc.plusIcon.get(i));
             dc.jsClick(dc.plusIcon.get(i));

@@ -1,8 +1,9 @@
+@RegressionTest @SmokeTestProfile
 Feature: Profile Feature Adresse page Functionality
 
   Background:
-    Given Navigate to LunaBlanco
-    And Hover over to Profile
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
 
   Scenario: Adresse Page
-    When Click on the Adresse button
+    When the customer clicks on the adresse button

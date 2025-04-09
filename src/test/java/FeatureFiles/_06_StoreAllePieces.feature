@@ -1,16 +1,17 @@
+@RegressionTest @SmokeTestStore
 Feature:Store/All Catogories
 
   Scenario:Filter,Hover over and click,view types,sort
 
-    Given Navigate to LunaBlanco
-    When Hover over to Store
-    Then Hover over to each catogory
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
+    Then the customer hovers over to each catogory
     |ALLE PIECES|
     |T-SHIRTS|
     |HOODIES|
     |SWEATER|
     |HEADWEAR|
     |ARCHIV|
-    Then Filter products
-    Then view products in choosen form
-    Then sort by each selection
+    Then the customer filters the products
+    Then the customer views the products in chosen form
+    Then the customer sorts the products by each selection

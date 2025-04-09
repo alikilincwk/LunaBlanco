@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestAboutUs
 Feature: About us AGB page Functionality
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
   Scenario: AGB page
 
-    When Click on the AGB button
-    Then Verify that the AGB page opens
+    When the customer clicks on the AGB button
+    Then the customer verifies that the AGB page opens

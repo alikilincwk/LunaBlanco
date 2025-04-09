@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestAboutUs
 Feature: About us Privacy Policy
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
   Scenario: Datenschutzerklärung page
 
-    When Click on the Datenschutzerklärung button
-    Then Verify that the Datenschutzerklärung page opens
+    When the customer clicks on the datenschutzerklärung button
+    Then the customer verifies that the datenschutzerklärung page opens

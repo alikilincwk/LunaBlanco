@@ -20,8 +20,8 @@ public class _US06_StoreAllCatogories {
     Headers headers = new Headers();
     DialogContent dc = new DialogContent();
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
-    @Then("Hover over to each catogory")
-    public void hoverOverToEachCatogory(DataTable dataTable) {
+    @Then("the customer hovers over to each catogory")
+    public void theCustomerHoversOverToEachCatogory(DataTable dataTable) {
 
         List<String> linkler = dataTable.asList();
         String catagory = "";
@@ -62,8 +62,8 @@ public class _US06_StoreAllCatogories {
 
     }
 
-    @Then("Filter products")
-    public void filterProducts() {
+    @Then("the customer filters the products")
+    public void theCustomerFiltersTheProducts() {
 
         headers.myClick(headers.allPieces);
         headers.myClick(headers.filter);
@@ -98,8 +98,8 @@ public class _US06_StoreAllCatogories {
             }
         }
     }
-    @Then("view products in choosen form")
-    public void viewProductsInChoosenForm() {
+    @Then("the customer views the products in chosen form")
+    public void theCustomerViewsTheProductsInChosenForm() {
         GWD.getDriver().get("https://lunablanco.com/");
         headers.hoverOver(headers.store);
         headers.myClick(headers.allPieces);
@@ -124,8 +124,8 @@ public class _US06_StoreAllCatogories {
         }
     }
 
-    @Then("sort by each selection")
-    public void sortByEachSelection() {
+    @Then("the customer sorts the products by each selection")
+    public void theCustomerSortTheProductsByEachSelection() {
         List <WebElement> sortList=headers.sortSelection.findElements(By.tagName("option"));
         for (int i = 0; i < 4; i++) {
             sortList=headers.sortSelection.findElements(By.tagName("option"));

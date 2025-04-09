@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestMisc
 Feature: Instagram Button Functionality
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
 
   Scenario: Instagram Button Functionality
-    When Click on the Instagram button
-    Then Verify Instagram page is opened
+    When the customer clicks on the Instagram button
+    Then the customer verifies Instagram page is opened

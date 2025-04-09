@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestAboutUs
 Feature: About us Cancellation Policy
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
   Scenario: Widerrufsbelehrung page
 
-    When Click on the Widerrufsbelehrung button
-    Then Verify that the Widerrufsbelehrung page opens
+    When the customer clicks on the widerrufsbelehrung button
+    Then the customer verifies that the widerrufsbelehrung page opens

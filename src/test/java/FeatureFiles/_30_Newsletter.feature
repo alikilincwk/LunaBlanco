@@ -1,10 +1,10 @@
+@RegressionTest @SmokeTestMisc
 Feature: Newsletter Functionality
 
   Background:
-    Given Navigate to LunaBlanco
-
+    Given a customer navigates to LunaBlanco
 
   Scenario: Newsletter Functionality
-    When Scroll down to the bottom of the page
-    Then Enter email adress
-    And Click on the button
+    When the customer scrolls down to the bottom of the page
+    Then the customer enters an email adress
+    And the customer clicks on the button

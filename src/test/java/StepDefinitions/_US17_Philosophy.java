@@ -16,15 +16,15 @@ public class _US17_Philosophy {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();
 
-    @When("Click on the Philosophy button")
-    public void clickOnThePhilosophyButton() {
+    @When("the customer clicks on the philosophy button")
+    public void theCustomerClicksOnThePhilosophyButton() {
         pp.myClick(headers.philosophyBtn);
     }
 
 
 
-    @Then("Verify that the Philosophy page opens")
-    public void verifyThatThePhilosophyPageOpens() {
+    @Then("the customer redirected to the philosophy page")
+    public void theCustomerRedirectedToThePhilosophyPage() {
 
         String currentUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals("https://lunablanco.com/philosophy/", currentUrl);

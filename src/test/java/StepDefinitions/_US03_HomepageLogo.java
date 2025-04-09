@@ -17,21 +17,21 @@ public class _US03_HomepageLogo {
     DialogContent dc = new DialogContent();
     ParentPage pp=new ParentPage();
 
-    @Given("I am on the LunaBlanco website")
-    public void iAmOnTheLunaBlancoWebsite() {
+    @Given("a customer on the LunaBlanco website")
+    public void aCustomerOnTheLunaBlancoWebsite() {
         driver.get("https://lunablanco.com/");
         pp.acceptAllCookies();
         pp.waitUntilVisibilityOf(dc.homepageLogo);
     }
 
-    @When("I click on the company logo")
-    public void iClickOnTheCompanyLogo() {
+    @When("the customer clicks on the company logo")
+    public void theCustomerClicksOnTheCompanyLogo() {
 
         dc.homepageLogo.click();
     }
 
-    @Then("I should be redirected to the homepage")
-    public void iShouldBeRedirectedToTheHomepage() {
+    @Then("the customer should be redirected to the homepage")
+    public void theCustomerShouldBeRedirectedToTheHomepage() {
         Assert.assertEquals("https://lunablanco.com/", driver.getCurrentUrl());
     }
 }

@@ -1,11 +1,12 @@
+@RegressionTest @SmokeTestProfile
 Feature: Profile Feature
 
   Background:
-    Given Navigate to LunaBlanco
-    When Hover over to Profile
-    Then Submenu should be seen
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to profile
+    Then the customer should see the submenu
 
   Scenario: Verify Log In/Log Out Options in Profile Submenu
-    Then If the user is not logged in, the "Anmelden" option should be visible
-    And Click elsewhere on the page
-    Then Submenu should be closed
+    And if the customer is not logged in, the "Anmelden" option should be visible
+    When the customer clicks elsewhere on the page
+    Then the submenu should be closed

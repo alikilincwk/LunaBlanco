@@ -15,15 +15,15 @@ public class _US07_ShopFeature_TShirts {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();
 
-    @When("Click on the T_Shirts button")
-    public void clickOnTheT_ShirtsButton() {
+    @When("the customer clicks on the t-shirts button")
+    public void theCustomerClicksOnTheTShirtsButton() {
 
         pp.myClick(headers.tShirts);
 
     }
 
-    @Then("Verify product visibility on T_Shirts page")
-    public void verifyProductVisibilityOnT_ShirtsPage() {
+    @Then("the customer verifies the product visibility on the t-shirts page")
+    public void theCustomerVerifiesTheProductVisibilityOnTheTShirtsPage() {
 
         DialogContent dc = new DialogContent();
         List<WebElement> products = dc.getTsirtsProducts();

@@ -9,13 +9,13 @@ public class _US19_CouponCode {
     DialogContent cc = new DialogContent();
     Faker dataFaker = new Faker();
 
-    @And("The Customer enters the invalid voucher code and clicks apply voucher")
+    @And("the customer enters the invalid voucher code and clicks apply voucher")
     public void theCustomerEntersTheInvalidVoucherCodeAndClicksApplyVoucher() {
         cc.mySendKeys(cc.couponCodePlc, dataFaker.beer().name());
         cc.myClick(cc.applyCouponBtn);
     }
 
-    @Then("The Customer verifies invalid coupon code")
+    @Then("the customer verifies invalid coupon code")
     public void theCustomerVerifiesInvalidCouponCode() {
         cc.waitUntilVisibilityOf(cc.errorCouponCode);
         cc.verifyContainsText(cc.errorCouponCode, "existiert nicht!");

@@ -1,23 +1,24 @@
+@RegressionTest @SmokeTestStore
 Feature: Sweaters
 
   Background:
-    Given Navigate to LunaBlanco
-    When Hover over to Store
-    Then Sub-Categories should be seen
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
+    Then sub-categories should be seen
 
   Scenario: Checking Sweaters
-    When Click on the Element in Header
+    When the customer clicks on the element in header
       | sHeaderSweaterIcon |
-    Then the user should be redirected to the sweater page
-    When the user hover over the product
+    Then the customer should be redirected to the sweater page
+    When the customer hover over the product
     Then hovering over a product should change its picture
-    When Click on the Element in Dialog
+    When the customer clicks on the element in dialog
       | sSweaterFilter |
-    And the user filters products by colour
+    And the customer filters products by colour
     Then the displayed products should match the selected colour filter
-    And the user filters products by size
+    And the customer filters products by size
     Then the displayed products should match the selected size filter
-    And the user filters products by price range
+    And the customer filters products by price range
     Then the displayed products should match the selected price range filter
-    And the user selects a column layout
-    And the user sorts products by category
+    And the customer selects a column layout
+    And the customer sorts products by category

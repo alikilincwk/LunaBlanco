@@ -9,13 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class _US21_Wishlist {
     DialogContent dc = new DialogContent();
 
-    @And("Hover over to first product")
-    public void hoverOverToFirstProduct() {
+    @And("the customer hovers over to first product")
+    public void theCustomerHoversOverToFirstProduct() {
         dc.hoverOver(dc.sSWFirstProduct);
     }
 
-    @And("Check wishlist to confirm guest users cannot save products")
-    public void checkWishlistToConfirmGuestUsersCannotSaveProducts() {
+    @And("the customer checks wishlist to confirm guest users cannot save products")
+    public void theCustomerChecksWishlistToConfirmGuestUsersCannotSaveProducts() {
         GWD.getDriver().navigate().to("https://lunablanco.com/wunschliste/");
     }
 }
