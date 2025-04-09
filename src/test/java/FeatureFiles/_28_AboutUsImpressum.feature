@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestAboutUs
 Feature: About Us Impressum Functionality
 
   Background:
-    Given Navigate to LunaBlanco
-    When Scroll down to the bottom of the page
+    Given a customer navigates to LunaBlanco
+    When the customer scrolls down to the bottom of the page
 
 
   Scenario: Impressum Functionality
-    Then Click on the Impressum
+    Then the customer clicks on the impressum

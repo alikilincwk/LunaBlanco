@@ -10,16 +10,16 @@ public class _US14_Profile_Feature_Bestellungen {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();
 
-    @When("Hover over to Profile")
-    public void hoverOverToProfile() {
+    @When("the customer hovers over to profile")
+    public void theCustomerHoversOverToProfile() {
 
         pp.hoverOver(headers.userProfile);
 
     }
 
 
-    @And("Click on the Bestellungen button")
-    public void clickOnTheBestellungenButton() {
+    @And("the customer clicks on the bestellungen button")
+    public void theCustomerClicksOnTheBestellungenButton() {
 
         pp.myClick(headers.bestellungenBtn);
 

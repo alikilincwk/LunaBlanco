@@ -15,14 +15,14 @@ public class _US13_ProfileMeinKonto {
     ParentPage pp = new ParentPage();
     DialogContent dc = new DialogContent();
 
-    @And("User Profile page should be seen")
+    @And("user profile page should be seen")
     public void userProfilePageShouldBeSeen() {
         String currentUrl = GWD.getDriver().getCurrentUrl();
         assert currentUrl != null;
         Assert.assertTrue(currentUrl.contains("/mein-konto/"));
     }
 
-    @Then("Field names should be displayed")
+    @Then("field names should be displayed")
     public void fieldNamesShouldBeDisplayed() {
         Assert.assertTrue(dc.anmeldenText.isDisplayed());
         Assert.assertTrue(dc.registrierenText.isDisplayed());
@@ -31,7 +31,7 @@ public class _US13_ProfileMeinKonto {
         Assert.assertTrue(dc.eMailAdresse.isDisplayed());
     }
 
-    @Then("Fields should be clickable and writable")
+    @Then("fields should be clickable and writable")
     public void fieldsShouldBeClickableAndWritable() {
         Assert.assertTrue(dc.usernameField.isEnabled(), "Field is not clickable!");
         Assert.assertTrue(dc.passwordField.isEnabled(), "Field is not clickable!");

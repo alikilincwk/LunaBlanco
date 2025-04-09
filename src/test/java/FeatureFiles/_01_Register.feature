@@ -1,42 +1,43 @@
+@RegressionTest @SmokeTestProfile
 Feature: Register
 
   Background:
-    Given Navigate to LunaBlanco
-    And Hover over to Profile
-    And Click on the Element in Header
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
+    And the customer clicks on the element in header
       | headerLogin |
 
 #  Due to existing bugs in both the login and registration systems,
 #  the scenarios below focus on negative testing for authentication processes.
 
   Scenario: Register with an invalid parameter
-    And User send keys in Dialog
+    And the customer sends keys in dialog
       | pRegMail | invalidMail |
-    And Click on the Element in Dialog
+    And the customer clicks on the element in dialog
       | pRegPrvCheck |
       | pRegButton   |
-    Then Confirm a validation message is visible on screen
+    Then the customer confirms a validation message is visible on screen
 
   Scenario: Register without accepting the privacy policy
-    And User send keys in Dialog
+    And the customer sends keys in dialog
       | pRegMail | invalidMail@testing.com |
-    And Click on the Element in Dialog
+    And the customer clicks on the element in dialog
       | pRegButton |
-    Then Confirm text message
+    Then the customer confirms the text message
       | pRegAlert | Bitte akzeptiere unsere Datenschutzerklärung |
 
   Scenario: Register with no email
-    And Click on the Element in Dialog
+    And the customer clicks on the element in dialog
       | pRegPrvCheck |
       | pRegButton   |
-    Then Confirm text message
+    Then the customer confirms the text message
       | pRegAlert | Bitte gib eine gültige E-Mail-Adresse an |
 
   Scenario: Register with an already registered email
-    And User send keys in Dialog
+    And the customer sends keys in dialog
       | pRegMail | testtestlunablanco@gmail.com |
-    And Click on the Element in Dialog
+    And the customer clicks on the element in dialog
       | pRegPrvCheck |
       | pRegButton   |
-    Then Confirm text message
+    Then the customer confirms the text message
       | pRegAlert | Bitte melde dich an oder verwende eine andere E-Mail-Adresse. |

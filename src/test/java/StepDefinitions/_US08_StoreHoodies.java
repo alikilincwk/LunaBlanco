@@ -12,15 +12,15 @@ import org.testng.Assert;
 public class _US08_StoreHoodies {
     DialogContent dc = new DialogContent();
 
-    @Then("Confirm that user is in the hoodies page")
-    public void confirmThatUserIsInTheHoodiesPage() {
+    @Then("the customer confirms that they are in the hoodies page")
+    public void theCustomerConfirmsThatTheyAreInTheHoodiesPage() {
         dc.wait.until(ExpectedConditions.visibilityOf(dc.hoodiesTitle));
         Assert.assertEquals(dc.hoodiesTitle.getText().toLowerCase(), "Hoodies".toLowerCase());
     }
 
 
-    @Then("Verify that hovering over a product changes its picture")
-    public void verifyThatHoveringOverAProductChangesItsPicture() {
+    @Then("the customer verifies that hovering over a product changes its picture")
+    public void theCustomerVerifiesThatHoveringOverAProductChangesItsPicture() {
         for (int i = 0; i < dc.allhoodies.size(); i++) {
             dc.scrolltoElement(dc.allhoodies.get(i));
             dc.hoverOver(dc.allhoodies.get(i));
@@ -29,8 +29,8 @@ public class _US08_StoreHoodies {
     }
 
 
-    @And("Filter product by price")
-    public void filterProductByPrice() {
+    @And("the customer filters the products by price")
+    public void theCustomerFiltersTheProductsByPrice() {
         Actions actions = new Actions(GWD.getDriver());
 
         actions.clickAndHold(dc.sSWFilterSliderLeft)

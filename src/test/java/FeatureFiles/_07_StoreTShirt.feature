@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestStore
 Feature: Shop Feature/T-Shirts page Functionality
 
   Background:
-    Given Navigate to LunaBlanco
-    And Hover over to Store
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
 
   Scenario: T-Shirt product page
-    When Click on the T_Shirts button
-    Then Verify product visibility on T_Shirts page
+    When the customer clicks on the t-shirts button
+    Then the customer verifies the product visibility on the t-shirts page

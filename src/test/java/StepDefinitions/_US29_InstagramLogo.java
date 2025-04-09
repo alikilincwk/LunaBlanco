@@ -15,16 +15,16 @@ public class _US29_InstagramLogo {
 
 
 
-    @When("Click on the Instagram button")
-    public void clickOnTheInstagramButton()
+    @When("the customer clicks on the Instagram button")
+    public void theCustomerClicksOnTheInstagramButton()
     {
         pp.scrollTOElementSmooth(dc.InstagramLogo);
         dc.myClick(dc.InstagramLogo);
     }
 
 
-    @Then("Verify Instagram page is opened")
-    public void verifyInstagramPageIsOpened()
+    @Then("the customer verifies Instagram page is opened")
+    public void theCustomerVerifiesInstagramPageIsOpened()
     {
         pp.switchToWindow(1);
         pp.wait.until(ExpectedConditions.urlToBe("https://www.instagram.com/lunablanco.de/"));

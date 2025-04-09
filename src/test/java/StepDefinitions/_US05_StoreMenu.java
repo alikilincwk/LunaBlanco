@@ -11,20 +11,20 @@ public class _US05_StoreMenu {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();;
 
-    @Given("Navigate to LunaBlanco")
-    public void navigateToLunaBlanco() {
+    @Given("a customer navigates to LunaBlanco")
+    public void aCustomerNavigatesToLunaBlanco() {
         GWD.getDriver().get("https://lunablanco.com/");
         pp.acceptAllCookies();
 
     }
 
-    @When("Hover over to Store")
-    public void hoverOverToStore() {
+    @When("the customer hovers over to store")
+    public void theCustomerHoversOverToStore() {
         pp.hoverOver(headers.store);
 
     }
 
-    @Then("Sub-Categories should be seen")
+    @Then("sub-categories should be seen")
     public void subCategoriesShouldBeSeen() {
         pp.verifyContainsText(headers.allPieces, "ALLE PIECES");
         pp.verifyContainsText(headers.tShirts, "T-SHIRTS");

@@ -9,8 +9,8 @@ public class _US16_Profile_Feature_Abmelden {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();
 
-    @When("Click on the Abmelden button")
-    public void clickOnTheAbmeldenButton() {
+    @When("the customer clicks on the abmelden button")
+    public void theCustomerClicksOnTheAbmeldenButton() {
 
         pp.myClick(headers.abmeldenBtn);
 

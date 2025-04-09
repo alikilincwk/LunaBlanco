@@ -1,16 +1,17 @@
+@RegressionTest @SmokeTestShopping
 Feature: Wishlist
   Background:
-    Given Navigate to LunaBlanco
-    When Hover over to Store
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
 
   Scenario:
-    And Click on the Element in Header
+    And the customer clicks on the element in header
       | sHeaderSweaterIcon |
-    And Hover over to first product
-    And Click on the Element in Dialog
+    And the customer hovers over to first product
+    And the customer clicks on the element in dialog
     |wLFirstProduct|
-    Then Confirm text message
+    Then the customer confirms the text message
     |wLAlert|Produkt wurde erfolgreich zur Wunschliste hinzugefügt|
-    And Check wishlist to confirm guest users cannot save products
-    Then Confirm text message
+    And the customer checks wishlist to confirm guest users cannot save products
+    Then the customer confirms the text message
     |wLNoProduct|Ihre Wunschliste ist leer.|

@@ -9,8 +9,8 @@ public class _US15_Profile_Feature_Adresse {
     Headers headers=new Headers();
     ParentPage pp=new ParentPage();
 
-    @When("Click on the Adresse button")
-    public void clickOnTheAdresseButton() {
+    @When("the customer clicks on the adresse button")
+    public void theCustomerClicksOnTheAdresseButton() {
 
         pp.myClick(headers.adresseBtn);
 

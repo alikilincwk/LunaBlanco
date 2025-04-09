@@ -13,14 +13,14 @@ public class _US20_Checkout {
     DialogContent ch = new DialogContent();
     Faker dataFaker = new Faker();
 
-    @When("The Customer clicks on any product")
+    @When("the customer clicks on any product")
     public void theCustomerClicksOnAnyProduct() {
         int randomProduct = ch.randomGenerator(ch.productList.size());
         ch.scrollTOElementSmooth(ch.productList.get(randomProduct));
         ch.myClick(ch.productList.get(randomProduct));
     }
 
-    @Then("The Customer confirms the existence of information text about the product\\(Fabric information,Delivery time,Price information)")
+    @Then("the customer confirms the existence of information text about the product\\(Fabric information,Delivery time,Price information)")
     public void theCustomerConfirmsTheExistenceOfInformationTextAboutTheProductFabricInformationDeliveryTimePriceInformation() {
         ch.waitUntilVisibilityOf(ch.productTitle);
         Assert.assertTrue(ch.productTitle.isDisplayed());
@@ -33,7 +33,7 @@ public class _US20_Checkout {
         System.out.println(ch.shippingDay.getText());
     }
 
-    @And("The Customer clicks on the size chart unit and verifies that the chart opens")
+    @And("the customer clicks on the size chart unit and verifies that the chart opens")
     public void theCustomerClicksOnTheSizeChartUnitAndVerifiesThatTheChartOpens() {
         if (!ch.sizeGuideButton.isEmpty()) {
             ch.myClick(ch.sizeGuideButton.get(0));
@@ -46,7 +46,7 @@ public class _US20_Checkout {
         }
     }
 
-    @Then("The Customer verifies high quality photos of the product taken from different angles")
+    @Then("the customer verifies high quality photos of the product taken from different angles")
     public void theCustomerVerifiesHighQualityPhotosOfTheProductTakenFromDifferentAngles() {
         for (WebElement photoList : ch.imageList) {
             Assert.assertTrue(photoList.isDisplayed());
@@ -55,7 +55,7 @@ public class _US20_Checkout {
         }
     }
 
-    @And("The Customer clicks on washing instructions and additional information and verifies text")
+    @And("the customer clicks on washing instructions and additional information and verifies text")
     public void theCustomerClicksOnWashingInstructionsAndAdditionalInformationAndVerifiesText() {
         ch.jsClick(ch.washingInstructions);
         for (WebElement text : ch.washingText) {
@@ -71,7 +71,7 @@ public class _US20_Checkout {
         }
     }
 
-    @And("The Customer selects the product size, checks the stock status, determines the product quantity and clicks the add to cart button")
+    @And("the customer selects the product size, checks the stock status, determines the product quantity and clicks the add to cart button")
     public void theCustomerSelectsTheProductSizeChecksTheStockStatusDeterminesTheProductQuantityAndClicksTheAddToCartButton() {
         if (!ch.sizeGuideButton.isEmpty()) {
             do {
@@ -92,19 +92,19 @@ public class _US20_Checkout {
         }
     }
 
-    @Then("The Customer verifies the text product successfully added to cart")
+    @Then("the customer verifies the text product successfully added to cart")
     public void theCustomerVerifiesTheTextProductSuccessfullyAddedToCart() {
         ch.waitUntilVisibilityOf(ch.addToCartVerify);
         ch.verifyContainsText(ch.addToCartVerify, "hinzugefügt.");
     }
 
-    @And("The Customer hovers over the shopping cart and clicks the checkout button")
+    @And("the customer hovers over the shopping cart and clicks the checkout button")
     public void theCustomerHoversOverTheShoppingCartAndClicksTheCheckoutButton() {
         ch.hoverOver(ch.shoppingCardIcon);
         ch.myClick(ch.checkoutBtn);
     }
 
-    @And("The Customer enters personal information")
+    @And("the customer enters personal information")
     public void theCustomerEntersPersonalInformation() {
         ch.mySendKeys(ch.firstNamePl, dataFaker.name().firstName());
         ch.mySendKeys(ch.lastNamePl, dataFaker.name().lastName());
@@ -120,7 +120,7 @@ public class _US20_Checkout {
         Assert.assertTrue(ch.differentAddressCheck.isEnabled());
     }
 
-    @Then("The Customer calculates and verifies the total price of the product")
+    @Then("the customer calculates and verifies the total price of the product")
     public void theCustomerCalculatesAndVerifiesTheTotalPriceOfTheProduct() {
         double total = 0;
         for (int i = 0; i < ch.productTotal.size(); i++) {
@@ -135,7 +135,7 @@ public class _US20_Checkout {
         Assert.assertEquals(totalPrice, (subTotal + dhlPrice));
     }
 
-    @When("The Customer clicks on payment options and enters incorrect credit card details")
+    @When("the customer clicks on payment options and enters incorrect credit card details")
     public void theCustomerClicksOnPaymentOptionsAndEntersIncorrectCreditCardDetails() {
         ch.wait.until(ExpectedConditions.textToBePresentInElement(ch.OderText,"ODER"));
         System.out.println(ch.OderText.getText());
@@ -152,7 +152,7 @@ public class _US20_Checkout {
         ch.switchToDefaultContent();
     }
 
-    @Then("The Customer verifies the error message on the message display")
+    @Then("the customer verifies the error message on the message display")
     public void theCustomerVerifiesTheErrorMessageOnTheMessageDisplay() {
         ch.myClick(ch.orderNowButton);
         ch.verifyContainsText(ch.errorMessage, "ungültig");

@@ -11,8 +11,8 @@ public class _US27_Privacy_Policy {
     DialogContent dc = new DialogContent();
     ParentPage pp=new ParentPage();
 
-    @When("Click on the Datenschutzerklärung button")
-    public void clickOnTheDatenschutzerklärungButton() {
+    @When("the customer clicks on the datenschutzerklärung button")
+    public void theCustomerClicksOnTheDatenschutzerklärungButton() {
 
         pp.scrolltoElement(dc.DatenschutzerklärungBtn);
         pp.myClick(dc.DatenschutzerklärungBtn);
@@ -21,8 +21,8 @@ public class _US27_Privacy_Policy {
 
 
 
-    @Then("Verify that the Datenschutzerklärung page opens")
-    public void verifyThatTheDatenschutzerklärungPageOpens() {
+    @Then("the customer verifies that the datenschutzerklärung page opens")
+    public void theCustomerVerifiesThatTheDatenschutzerklärungPageOpens() {
         String currentUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals("https://lunablanco.com/datenschutzerklaerung/", currentUrl);
 

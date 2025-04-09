@@ -8,8 +8,8 @@ import org.testng.Assert;
 public class _US10_StoreHeadwear {
     DialogContent dc = new DialogContent();
 
-    @Then("the user should be redirected to the headwear page")
-    public void theUserShouldBeRedirectedToTheHeadwearPage() {
+    @Then("the customer should be redirected to the headwear page")
+    public void theCustomerShouldBeRedirectedToTheHeadwearPage() {
         dc.wait.
                 until(ExpectedConditions.
                         visibilityOf(dc.sSWTitle));

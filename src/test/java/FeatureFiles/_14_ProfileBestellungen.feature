@@ -1,10 +1,11 @@
+@RegressionTest @SmokeTestProfile
 Feature: Profile Feature Bestellungen page Functionality
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
 
   Scenario: Bestellungen Page
 
-    When Hover over to Profile
-    And Click on the Bestellungen button
+    When the customer hovers over to profile
+    And the customer clicks on the bestellungen button

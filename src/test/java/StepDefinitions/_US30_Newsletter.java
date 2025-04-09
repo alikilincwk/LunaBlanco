@@ -10,20 +10,20 @@ public class _US30_Newsletter {
     DialogContent dc = new DialogContent();
     ParentPage pp=new ParentPage();
 
-    @When("Scroll down to the bottom of the page")
-    public void scrollDownToTheBottomOfThePage()
+    @When("the customer scrolls down to the bottom of the page")
+    public void theCustomerScrollsDownToTheBottomOfThePage()
     {
         pp.scrolltoElement(dc.emailInput);
     }
 
-    @Then("Enter email adress")
-    public void enterEmailAdress()
+    @Then("the customer enters an email adress")
+    public void theCustomerEntersEmailAdress()
     {
         dc.mySendKeys(dc.emailInput,"kadriyealsancak@gmail.com");
     }
 
-    @And("Click on the button")
-    public void clickOnTheButton()
+    @And("the customer clicks on the button")
+    public void theCustomerClicksOnTheButton()
     {
         dc.myClick(dc.submitButton);
     }

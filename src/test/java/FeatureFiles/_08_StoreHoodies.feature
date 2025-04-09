@@ -1,22 +1,23 @@
+@RegressionTest @SmokeTestStore
 Feature: Hoodies Functionality
 
   Background:
-    Given Navigate to LunaBlanco
-    And Hover over to Store
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
 
   Scenario: Checking Hoodies page
-    When Click on the Element in Header
+    When the customer clicks on the element in header
       | HOODIES |
-    Then Confirm that user is in the hoodies page
+    Then the customer confirms that they are in the hoodies page
 
-    And the user selects a column layout
-    Then Verify that hovering over a product changes its picture
-    Then Click on the Element in Dialog
+    And the customer selects a column layout
+    Then the customer verifies that hovering over a product changes its picture
+    Then the customer clicks on the element in dialog
       | sSweaterFilter |
 
-    And the user filters products by colour
+    And the customer filters products by colour
     Then the displayed products should match the selected colour filter
-    And the user filters products by size
+    And the customer filters products by size
     Then the displayed products should match the selected size filter
-    And Filter product by price
-    And the user sorts products by category
+    And the customer filters the products by price
+    And the customer sorts products by category

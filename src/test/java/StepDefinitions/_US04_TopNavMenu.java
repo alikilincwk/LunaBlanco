@@ -22,11 +22,6 @@ public class _US04_TopNavMenu {
     DialogContent dc = new DialogContent();
     ParentPage pp = new ParentPage();
 
-    @Given("I am on the LunaBlanco homepage")
-    public void iAmOnTheLunaBlancoHomepage() {
-        driver.get("https://lunablanco.com/");
-        pp.acceptAllCookies();
-    }
 
     @Then("the {string} should be visible")
     public void theElementShouldBeVisible(String elementName) {
@@ -39,15 +34,15 @@ public class _US04_TopNavMenu {
         Assert.assertTrue(elementName + " is not visible.", element.isDisplayed());
     }
 
-    @When("I click on the {string}")
-    public void iClickOnThe(String elementName) {
+    @When("the customer clicks on the {string}")
+    public void theCustomerClickOnThe(String elementName) {
         WebElement element = header.getWebElement(elementName);
         Assert.assertNotNull("Element not found: " + elementName, element);
         pp.myClick(element);
     }
 
-    @Then("I should be redirected to the {string} page")
-    public void iShouldBeRedirectedToThePage(String expectedKeywordInUrl) {
+    @Then("the customer should be redirected to the {string} page")
+    public void theCustomerShouldBeRedirectedToThePage(String expectedKeywordInUrl) {
         String url = GWD.getDriver().getCurrentUrl().toLowerCase();
         System.out.println("Current URL: " + url);
 
@@ -76,23 +71,23 @@ public class _US04_TopNavMenu {
                 url.contains(expectedKeywordInUrl.toLowerCase()));
     }
 
-    @When("I hover over the {string}")
-    public void iHoverOverThe(String elementName) {
+    @When("the customer hovers over the {string}")
+    public void theCustomerHoversOverThe(String elementName) {
         WebElement element = header.getWebElement(elementName);
         Assert.assertNotNull("Element not found for hover: " + elementName, element);
         pp.hoverOver(element);
     }
 
-    @Then("I should see the shopping cart submenu")
-    public void iShouldSeeTheShoppingCartSubmenu() {
+    @Then("the customer should see the shopping cart submenu")
+    public void theCustomerShouldSeeTheShoppingCartSubmenu() {
         pp.waitUntilVisibilityOf(header.emptyCartText);
         String actualText = header.emptyCartText.getText().trim();
         System.out.println("Shopping cart submenu item: " + actualText);
         Assert.assertEquals("Keine Produkte im Warenkorb", actualText);
     }
 
-    @Then("I should see the store submenu")
-    public void iShouldSeeTheStoreSubmenu() throws InterruptedException {
+    @Then("the customer should see the store submenu")
+    public void theCustomerShouldSeeTheStoreSubmenu() throws InterruptedException {
         Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
 
@@ -115,8 +110,8 @@ public class _US04_TopNavMenu {
         Assert.assertTrue("ARCHIV not displayed", header.archiv.isDisplayed());
     }
 
-    @Then("I should see the profile submenu")
-    public void iShouldSeeTheProfileSubmenu() {
+    @Then("the customer should see the profile submenu")
+    public void theCustomerShouldSeeTheProfileSubmenu() {
 
         for (WebElement item : header.profileSubmenu) {
             Assert.assertTrue("Submenu item is not visible: " + item.getText(), item.isDisplayed());

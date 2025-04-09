@@ -1,8 +1,9 @@
+@RegressionTest @SmokeTestProfile
 Feature: Profile Feature Abmelden button Functionality
 
   Background:
-    Given Navigate to LunaBlanco
-    And Hover over to Profile
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to store
 
   Scenario: Abmelden button
-    When Click on the Abmelden button
+    When the customer clicks on the abmelden button

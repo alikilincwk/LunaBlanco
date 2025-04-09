@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestCustomerService
 Feature: About us Shipping and Returns page Functionality
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
   Scenario: Shipping and Returns page
-    When Click on the Shipping and Returns button
-    Then Verify that the Shipping and Returns page opens
-    And Verify that return period and shipping areas on the Shipping and Returns Page
+    When the customer clicks on the shipping and returns button
+    Then the customer verifies that the shipping and returns page opens
+    And the customer verifies that return period and shipping areas on the shipping and returns page

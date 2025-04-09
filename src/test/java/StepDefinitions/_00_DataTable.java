@@ -11,24 +11,24 @@ public class _00_DataTable {
     DialogContent dc = new DialogContent();
     Headers h=new Headers();
 
-    @And("Click on the Element in Header")
-    public void clickOnTheElementInHeader(DataTable dtLinks) {
+    @And("the customer clicks on the element in header")
+    public void theCustomerClicksOnTheElementInHeader(DataTable dtLinks) {
         List<String> listLinks = dtLinks.asList(String.class);
         for (int i = 0; i < listLinks.size(); i++) {
             h.myClick(h.getWebElement(listLinks.get(i)));
         }
     }
 
-    @And("Click on the Element in Dialog")
-    public void clickOnTheElementInDialog(DataTable dtButtons) {
+    @And("the customer clicks on the element in dialog")
+    public void theCustomerClicksOnTheElementInDialog(DataTable dtButtons) {
         List<String> listButton = dtButtons.asList(String.class);
         for (int i = 0; i < listButton.size(); i++) {
             dc.myClick(dc.getWebElement(listButton.get(i)));
         }
     }
 
-    @And("User send keys in Dialog")
-    public void userSendKeysInDialog(DataTable dtBoxAndTexts) {
+    @And("the customer sends keys in dialog")
+    public void theCustomerSendsKeysInDialog(DataTable dtBoxAndTexts) {
         List<List<String>> listBoxAndTexts = dtBoxAndTexts.asLists(String.class);
         for (int i = 0; i < listBoxAndTexts.size(); i++) {
             WebElement box = (dc.getWebElement(listBoxAndTexts.get(i).get(0)));
@@ -36,8 +36,8 @@ public class _00_DataTable {
         }
     }
 
-    @And("User send keys in Header")
-    public void userSendKeysInHeader(DataTable dtBoxAndTexts) {
+    @And("the customer sends keys in header")
+    public void theCustomerSendsKeysInHeader(DataTable dtBoxAndTexts) {
         List<List<String>> listBoxAndTexts = dtBoxAndTexts.asLists(String.class);
         for (int i = 0; i < listBoxAndTexts.size(); i++) {
             WebElement box = (h.getWebElement(listBoxAndTexts.get(i).get(0)));
@@ -45,8 +45,8 @@ public class _00_DataTable {
         }
     }
 
-    @And("Confirm text message")
-    public void confirmTextMessage(DataTable dtBoxAndTexts) {
+    @And("the customer confirms the text message")
+    public void theCustomerConfirmsTheTextMessage(DataTable dtBoxAndTexts) {
         List<List<String>> listBoxAndTexts = dtBoxAndTexts.asLists(String.class);
         for (int i = 0; i < listBoxAndTexts.size(); i++) {
             WebElement box = (dc.getWebElement(listBoxAndTexts.get(i).get(0)));

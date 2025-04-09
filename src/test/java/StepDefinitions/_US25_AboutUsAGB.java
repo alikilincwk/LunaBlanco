@@ -13,8 +13,8 @@ public class _US25_AboutUsAGB {
     DialogContent dc = new DialogContent();
     ParentPage pp=new ParentPage();
 
-    @When("Click on the AGB button")
-    public void clickOnTheAgbButton() {
+    @When("the customer clicks on the AGB button")
+    public void theCustomerClicksOnTheAGBButton() {
 
         pp.scrolltoElement(dc.agbBtn);
         pp.myClick(dc.agbBtn);
@@ -23,8 +23,8 @@ public class _US25_AboutUsAGB {
 
 
 
-    @Then("Verify that the AGB page opens")
-    public void verifyThatTheAgbPageOpens() {
+    @Then("the customer verifies that the AGB page opens")
+    public void theCustomerVerifiesThatTheAGBPageOpens() {
         String currentUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals("https://lunablanco.com/agb/", currentUrl);
 

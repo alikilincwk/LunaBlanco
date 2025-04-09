@@ -12,8 +12,8 @@ public class _US01_Register {
     DialogContent dc = new DialogContent();
     JavascriptExecutor js;
 
-    @Then("Confirm a validation message is visible on screen")
-    public void confirmAValidationMessageIsVisibleOnScreen() {
+    @Then("the customer confirms a validation message is visible on screen")
+    public void theCustomerConfirmsAValidationMessageIsVisibleOnScreen() {
         js = (JavascriptExecutor) GWD.getDriver();
         Assert.assertEquals((Boolean) js.executeScript("return arguments[0].validity.typeMismatch;", dc.pRegMail),true);
     }

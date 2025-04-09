@@ -13,23 +13,23 @@ public class _US11_StoreArchiv {
     ParentPage parent = new ParentPage();
     DialogContent dc = new DialogContent();
 
-    @Then("Confirm that user is in the Archiv page")
+    @Then("the customer confirms that they are in the archiv page")
     public void confirmThatUserIsInTheArchivPage() {
 
         String currentUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals("https://lunablanco.com/category/archiv/", currentUrl);
     }
 
-    @Then("Product page should be seen")
-    public void productPageShouldBeSeen() {
+    @Then("the product page should be seen")
+    public void theProductPageShouldBeSeen() {
 
         String currentUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals("https://lunablanco.com/store/luna-blanco-vvg-1889-navyblue/", currentUrl);
 
     }
 
-    @Then("Confirm that the product is marked as out-of-stock")
-    public void confirmThatTheProductIsMarkedAsOutOfStock() {
+    @Then("the customer confirms that the product is marked as out-of-stock")
+    public void theCustomerConfirmsThatTheProductIsMarkedAsOutOfStock() {
 
         parent.verifyContainsText(dc.ausverkauftInfo,"DIESES PRODUKT IST AUSVERKAUFT UND NICHT VERFÜGBAR.");
     }

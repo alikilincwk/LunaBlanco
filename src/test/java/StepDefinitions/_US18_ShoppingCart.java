@@ -12,19 +12,19 @@ import java.util.Objects;
 public class _US18_ShoppingCart {
     DialogContent sc = new DialogContent();
 
-    @And("The Customer hovers over the shopping cart and clicks the view shopping cart button")
+    @And("the customer hovers over the shopping cart and clicks the view shopping cart button")
     public void theCustomerHoversOverTheShoppingCartAndClicksTheViewShoppingCartButton() {
         sc.hoverOver(sc.shoppingCardIcon);
         sc.wait.until(ExpectedConditions.elementToBeClickable(sc.showShoppingCartBtn));
         sc.jsClick(sc.showShoppingCartBtn);
     }
 
-    @Then("The Customer verifies that the update cart button has not been clicked without updating")
+    @Then("the customer verifies that the update cart button has not been clicked without updating")
     public void theCustomerVerifiesThatTheUpdateCartButtonHasNotBeenClickedWithoutUpdating() {
         Assert.assertTrue(sc.updateCartBtn.isDisplayed());
     }
 
-    @When("The Customer increases the amount of products in the shopping cart and clicks the update shopping cart button")
+    @When("the customer increases the amount of products in the shopping cart and clicks the update shopping cart button")
     public void theCustomerIncreasesTheAmountOfProductsInTheShoppingCartAndClicksTheUpdateShoppingCartButton() {
         int maxValue = Integer.parseInt(Objects.requireNonNull(sc.productQuantity.getAttribute("max")));
         String stValue = String.valueOf(sc.randomGenerator(maxValue)+1);
@@ -34,7 +34,7 @@ public class _US18_ShoppingCart {
         sc.wait.until(ExpectedConditions.invisibilityOf(sc.blockOverlay));
     }
 
-    @Then("The Customer verifies the product subtotal price")
+    @Then("the customer verifies the product subtotal price")
     public void theCustomerVerifiesTheProductSubtotalPrice() {
         double productPrice = Double.parseDouble(sc.productPrice.getText().replaceAll("[^0-9,.]", "").replace(",", "."));
         double productQuantity = Double.parseDouble(Objects.requireNonNull(sc.productQuantity.getAttribute("value")));
@@ -45,13 +45,13 @@ public class _US18_ShoppingCart {
         Assert.assertEquals(subTotal, total);
     }
 
-    @When("The Customer clicks the empty cart button")
+    @When("the customer clicks the empty cart button")
     public void theCustomerClicksTheEmptyCartButton() {
         sc.myClick(sc.cartEmptyBtn);
         sc.alertAccept(1);
     }
 
-    @Then("The Customer confirms that the shopping cart is empty")
+    @Then("the customer confirms that the shopping cart is empty")
     public void theCustomerConfirmsThatTheShoppingCartIsEmpty() {
         sc.waitUntilVisibilityOf(sc.cartEmptyMessage);
         sc.verifyContainsText(sc.cartEmptyMessage, "gegenwärtig leer");

@@ -14,8 +14,8 @@ public class _US09_StoreSweater {
     static String colour, size, priceMin, priceMax= "";
     static int rndNum = 0;
 
-    @Then("the user should be redirected to the sweater page")
-    public void theUserShouldBeRedirectedToTheSweaterPage() {
+    @Then("the customer should be redirected to the sweater page")
+    public void theCustomerShouldBeRedirectedToTheSweaterPage() {
         dc.wait.
                 until(ExpectedConditions.
                         visibilityOf(dc.sSWTitle));
@@ -27,8 +27,8 @@ public class _US09_StoreSweater {
                                 toLowerCase());
     }
 
-    @When("the user hover over the product")
-    public void theUserHoverOverTheProduct() {
+    @When("the customer hover over the product")
+    public void theCustomerHoverOverTheProduct() {
         rndNum = dc.randomGenerator(dc.sSWProducts.
                         size() - 1);
         dc.wait.
@@ -63,8 +63,8 @@ public class _US09_StoreSweater {
 
     }
 
-    @And("the user filters products by colour")
-    public void theUserFiltersProductsByColour() {
+    @And("the customer filters products by colour")
+    public void theCustomerFiltersProductsByColour() {
         rndNum = dc.randomGenerator(dc.sSWFilterColourList.
                 size() - 1);
         dc.myClick(dc.sSWFilterColourList.
@@ -121,8 +121,8 @@ public class _US09_StoreSweater {
                         invisibilityOf(dc.sSWFilterReset));
     }
 
-    @And("the user filters products by size")
-    public void theUserFiltersProductsBySize() {
+    @And("the customer filters products by size")
+    public void theCustomerFiltersProductsBySize() {
         rndNum = dc.randomGenerator(dc.sSWFilterSizeList.
                 size() - 1);
         dc.myClick(dc.sSWFilterSizeList.
@@ -177,8 +177,8 @@ public class _US09_StoreSweater {
                         invisibilityOf(dc.sSWFilterReset));
     }
 
-    @And("the user filters products by price range")
-    public void theUserFiltersProductsByPriceRange() {
+    @And("the customer filters products by price range")
+    public void theCustomerFiltersProductsByPriceRange() {
         Actions actions = new Actions(GWD.getDriver());
         actions.
                 clickAndHold(dc.sSWFilterSliderLeft)
@@ -272,8 +272,8 @@ public class _US09_StoreSweater {
         dc.myClick(dc.sSWFilter);
     }
 
-    @And("the user selects a column layout")
-    public void theUserSelectsAColumnLayout() {
+    @And("the customer selects a column layout")
+    public void theCustomerSelectsAColumnLayout() {
         dc.myClick(dc.sSWFilterColumn2);
         Assert.
                 assertEquals(dc.sSWFilterColumn2.
@@ -291,8 +291,8 @@ public class _US09_StoreSweater {
                         "active");
     }
 
-    @And("the user sorts products by category")
-    public void theUserSortsProductsByCategory() {
+    @And("the customer sorts products by category")
+    public void theCustomerSortsProductsByCategory() {
         dc.selectByValue(dc.sSWSortSelect,
                 "popularity");
         dc.wait.

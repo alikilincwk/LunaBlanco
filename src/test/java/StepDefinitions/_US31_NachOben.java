@@ -17,16 +17,16 @@ public class _US31_NachOben {
     WebDriver driver = GWD.getDriver();
     ParentPage pp = new ParentPage();
 
-    @Given("I am on the LunaBlanco homepage for Nach Oben test")
-    public void iAmOnTheLunaBlancoHomepageForNachObenTest() throws InterruptedException{
+    @Given("a customer on the LunaBlanco homepage for nach oben test")
+    public void aCustomerOnTheLunaBlancoHomepageForNachObenTest() throws InterruptedException{
         driver.get("https://lunablanco.com/");
         pp.acceptAllCookies();
         Thread.sleep(1000);
 
     }
 
-    @When("I scroll to the bottom or click the down arrow")
-    public void iScrollToBottomOrClickDownArrow() throws InterruptedException {
+    @When("the customer scrolls to the bottom or click the down arrow")
+    public void theCustomerScrollsToBottomOrClickDownArrow() throws InterruptedException {
         header.arrowDownBtn.click();
         Thread.sleep(2000);
     }
@@ -37,8 +37,8 @@ public class _US31_NachOben {
         Assert.assertTrue(btnName + " butonu görünmüyor!", header.nachObenBtn.isDisplayed());
     }
 
-    @When("I click the {string} button")
-    public void iClickTheButton(String btnName) throws InterruptedException {
+    @When("the customer clicks the {string} button")
+    public void theCustomerClicksTheButton(String btnName) throws InterruptedException {
         header.nachObenBtn.click();
         Thread.sleep(2000);
     }

@@ -3,16 +3,17 @@
 #On the account page, the customer should be able to view
 # and click and write details such as first name, last name, email, and password.
 
+@RegressionTest @SmokeTestProfile
 Feature: Profile Feature
 
   Background:
-    Given Navigate to LunaBlanco
-    When Hover over to Profile
-    Then Submenu should be seen
+    Given a customer navigates to LunaBlanco
+    When the customer hovers over to profile
+    Then the customer should see the submenu
 
   Scenario: Verify the User Information Page
-    When Click on the Element in Header
+    When the customer clicks on the element in header
       | meinKonto |
-    And User Profile page should be seen
-    Then Field names should be displayed
-    Then Fields should be clickable and writable
+    Then user profile page should be seen
+    Then field names should be displayed
+    Then fields should be clickable and writable

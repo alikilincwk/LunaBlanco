@@ -1,9 +1,10 @@
+@RegressionTest @SmokeTestAboutUs
 Feature: Philosophy page Functionality
 
   Background:
-    Given Navigate to LunaBlanco
+    Given a customer navigates to LunaBlanco
 
   Scenario: Philosophy page
 
-    When Click on the Philosophy button
-    Then Verify that the Philosophy page opens
+    When the customer clicks on the philosophy button
+    Then the customer redirected to the philosophy page
