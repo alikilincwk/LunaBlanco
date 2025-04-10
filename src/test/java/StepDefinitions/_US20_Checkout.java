@@ -77,17 +77,19 @@ public class _US20_Checkout {
             do {
 
                 ch.myClick(ch.sizeList.get(ch.randomGenerator(ch.sizeList.size())));
+                ch.wait.until(ExpectedConditions.attributeToBe(ch.resetSize,"style","visibility: visible;"));
 
                 if (!ch.inStockText.isEmpty() && ch.inStockText.get(0).getText().equals("VORRÄTIG")) {
-
                     ch.myClick(ch.addToCartButton);
                     break;  // Break the cycle if in stock
+
                 } else if (!ch.outOfStockText.isEmpty() && ch.outOfStockText.get(0).getText().equals("NICHT VORRÄTIG")) {
                     ch.myClick(ch.addToCartButton);
                     ch.alertAccept(1);
                 }
             } while (!ch.outOfStockText.isEmpty());  // If out of stock, the cycle continues
         } else {
+
             ch.myClick(ch.addToCartButton);
         }
     }
