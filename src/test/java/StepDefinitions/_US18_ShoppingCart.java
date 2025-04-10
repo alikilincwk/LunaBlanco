@@ -39,6 +39,7 @@ public class _US18_ShoppingCart {
         double productPrice = Double.parseDouble(sc.productPrice.getText().replaceAll("[^0-9,.]", "").replace(",", "."));
         double productQuantity = Double.parseDouble(Objects.requireNonNull(sc.productQuantity.getAttribute("value")));
         double total = (productPrice * productQuantity);
+        sc.waitUntilVisibilityOf(sc.productSubTotal);
         double subTotal = Double.parseDouble(sc.productSubTotal.getText().replaceAll("[^0-9,.]", "").replace(",", "."));
         System.out.println(total);
         System.out.println(subTotal);

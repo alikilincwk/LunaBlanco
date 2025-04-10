@@ -287,12 +287,10 @@ public class DialogContent extends ParentPage{
     public WebElement errorMessage;
     @FindBy(css = "[id='wc-stripe-express-checkout-button-separator']")
     public WebElement OderText;
+    @FindBy(css = "[class='reset_variations alt-font']")
+    public WebElement resetSize;
 
     //_US_18_ShoppingCart
-    @FindBy(xpath = "(//*[@class='icon-eye icons'])[1]")
-    public WebElement productIconEye;
-    @FindBy(css = "[class='hongo-cart-message alt-font']")
-    public WebElement successfullyMessage;
     @FindBy(css = "[class='button wc-forward']")
     public WebElement showShoppingCartBtn;
     @FindBy(css = "[name='update_cart']")
