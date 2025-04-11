@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,7 +50,8 @@ public class _US18_ShoppingCart {
     @When("the customer clicks the empty cart button")
     public void theCustomerClicksTheEmptyCartButton() {
         sc.myClick(sc.cartEmptyBtn);
-        sc.alertAccept(1);
+        sc.wait(1);
+        GWD.getDriver().switchTo().alert().accept();
     }
 
     @Then("the customer confirms that the shopping cart is empty")
